@@ -1,0 +1,83 @@
+@import 'styles/_colors';
+@import 'styles/_typography';
+
+.podcast-feed {
+  &-episode {
+    display: flex;
+    padding: 14px 28px;
+    margin: 16px -28px;
+    border-radius: 13px;
+
+    &:nth-child(odd) {
+      background-color: $brand-white;
+    }
+
+    &-content {
+      width: 100%;
+    }
+
+    h5 {
+      color: darken($brand-darkgrey, 15%);
+      font-weight: $font-weight-normal;
+    }
+
+    &-text {
+      @include editorial-tile-body;
+
+      color: $brand-darkgrey;
+    }
+
+    &-play {
+      padding-top: 12px;
+      padding-right: 24px;
+
+      .play-button {
+        color: $brand-white;
+      }
+    }
+
+    &-player {
+      width: 100%;
+      
+      .toggle-play-wrapper {
+        display: none;
+      }
+
+      .react-h5-audio-player {
+        > .flex {
+          background: none !important;
+          box-shadow: none !important;
+        }
+      }
+
+      .indicator {
+        background-color: $brand-red !important;
+        box-shadow: none !important;
+      }
+
+      .volume-controls {
+        .volumn {
+          border-bottom-color: $brand-red !important;
+        }
+      }
+
+      .time {
+        font-weight: $font-weight-medium;
+        
+        .current-time {
+          margin-right: 6px;
+        }
+
+        .total-time {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    &-episode {
+      border-radius: 0;
+    }
+  }
+}

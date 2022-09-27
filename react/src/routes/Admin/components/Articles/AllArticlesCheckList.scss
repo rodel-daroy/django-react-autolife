@@ -1,0 +1,12 @@
+@import 'styles/_variables';
+
+.all-articles-checklist {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &-stepper {
+    background-color: transparent !important;
+  }
+}

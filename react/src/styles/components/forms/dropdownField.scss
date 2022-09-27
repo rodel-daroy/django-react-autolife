@@ -1,0 +1,235 @@
+@import "~react-select/dist/react-select.css";
+
+.custom-dropdown {
+  display: inline-block;
+  min-width: 220px;
+  //width: 100%;
+
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+
+  .custom-dropdown-inner {
+    position: relative;
+    font-size: 16px;
+    color: $brand-black;
+    text-transform: uppercase;
+  }
+
+  .Select {
+    &.is-focused,
+    &.is-pseudo-focused {
+      border: none;
+      outline: 0.5px solid $focus-outline-color !important;
+      outline-offset: 2px !important;
+      box-shadow: none !important;
+
+      > .Select-control {
+        border: 1px solid $brand-lightgrey;
+        border-bottom: none;
+        box-shadow: none;
+      }
+
+      .Select-placeholder {
+        color: $brand-lightgrey;
+      }
+    }
+
+    * {
+      outline: none !important;
+    }
+
+    .icon {
+      font-size: 24px;
+
+      &:before {
+        transition: transform 0.5s, color 0.5s;
+      }
+    }
+
+    &.is-open {
+      .icon:before {
+        transform: scaleY(-1);
+      }
+    }
+
+    &.is-disabled {
+      > .Select-control {
+        background-color: $brand-lightgrey;
+
+        &,
+        .Select-placeholder,
+        &.Select-value {
+          color: $brand-darkgrey !important;
+        }
+
+        .Select-arrow-zone {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .Select-control {
+    position: relative;
+    border: 1px solid $brand-lightgrey;
+    border-radius: 0;
+    border-bottom: none;
+    color: $brand-black;
+
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $brand-red;
+    }
+  }
+
+  .Select-input {
+    display: inline-flex !important;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background: none !important;
+
+    padding: {
+      left: 16px;
+    }
+
+    > input {
+      outline: none !important;
+      padding: {
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  .Select-placeholder,
+  .Select--single > .Select-control .Select-value {
+    padding: {
+      left: 16px;
+      right: 40px;
+    }
+    color: $brand-black;
+  }
+
+  .Select-menu-outer {
+    border-radius: 0;
+    z-index: 5 !important;
+  }
+
+  .Select-option {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    text-transform: none !important;
+    color: $brand-black;
+    border-bottom: 1px solid $brand-lightgrey;
+
+    &:last-child {
+      border-radius: 0;
+      border-bottom: none;
+    }
+
+    &.is-selected {
+      background-color: $brand-red;
+      color: $brand-white;
+    }
+
+    &.is-focused:not(.is-selected) {
+      background-color: rgba($brand-red, 0.7);
+      color: $brand-white;
+    }
+  }
+
+  .Select-noresults {
+    text-transform: none !important;
+  }
+
+  &.no-border {
+    .Select-control {
+      border: none !important;
+
+      &:after {
+        left: 16px;
+        right: 16px;
+      }
+    }
+
+    .Select.is-open {
+      .Select-control {
+        &:after {
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .Select-menu-outer {
+    margin-top: 0;
+    border-top: none;
+    overflow: hidden;
+
+    @keyframes dropdown-menu-appear {
+      0% {
+        max-height: 0;
+      }
+      100% {
+        max-height: 200px;
+      }
+    }
+
+    animation: {
+      name: dropdown-menu-appear;
+      duration: 0.5s;
+    }
+  }
+
+  @mixin make-height($height) {
+    .Select-control,
+    .Select-input {
+      height: $height;
+    }
+
+    .Select-placeholder,
+    .Select--single > .Select-control .Select-value {
+      line-height: $height;
+    }
+
+    .Select-option {
+      padding-top: ($height - 21px) / 2;
+      padding-bottom: ($height - 21px) / 2;
+    }
+  }
+
+  &.large {
+    @include make-height(45px);
+  }
+
+  &.medium {
+    @include make-height(38px);
+  }
+
+  &.small {
+    @include make-height(30px);
+  }
+}
+
+[data-whatinput="mouse"] .custom-dropdown .Select {
+  &.is-focused,
+  &.is-pseudo-focused {
+    outline: none !important;
+  }
+}

@@ -1,0 +1,28 @@
+.filter-dropdown {
+  &-menu {
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    
+  }
+  
+  &-list {
+    list-style: none;
+    display: block;
+    padding: 0;
+
+    > li {
+      display: inline-block;
+      margin: 2px 4px;
+      width: 100%;
+    }
+
+    .custom-checkbox {
+      margin: 4px 0;
+    }
+  }
+}

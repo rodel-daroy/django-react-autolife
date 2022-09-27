@@ -1,0 +1,88 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% load i18n admin_urls %}
+
+{% block extrahead %}{{ block.super }}
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+    <script type="text/javascript" src="{% static 'admin/js/jquery.init.js' %}"></script>
+    <script type="text/javascript">
+        var $ = jQuery
+    </script>
+{% endblock %}
+
+{% block extrastyle %}
+
+    <style>
+        select[multiple], select[size] {
+            height: 200px;
+        }
+        select {
+            width: 80%;
+        }
+        input {
+            width: 50%;
+        }
+    </style>
+{% endblock %}
+{% block nav-global %}
+    <span class="sidebar-link-label">
+        <span class="sidebar-link-icon icon-open">
+        </span>
+        Related Links
+        <a href="{% url 'assets_url' %}" class="sidebar-link icon">
+        <span class="sidebar-link-label">
+
+            <span class="sidebar-link-icon icon-open-external">
+
+            </span>
+
+                                Add Assets
+        </span>
+        </a>
+    <a href="{% url 'all_assets' %}" class="sidebar-link icon">
+        <span class="sidebar-link-label">
+
+            <span class="sidebar-link-icon icon-open-external">
+
+            </span>
+
+                                Set Carousel Image Order
+        </span>
+        </a>
+    <a href="{% url 'ui_controls:tiles_list' %}" class="sidebar-link icon">
+        <span class="sidebar-link-label">
+
+            <span class="sidebar-link-icon icon-open-external">
+
+            </span>
+
+                                Order Tiles
+        </span>
+        </a>
+    <a href="{% url 'clear_cache' %}" class="sidebar-link icon">
+        <span class="sidebar-link-label">
+
+            <span class="sidebar-link-icon icon-open-external">
+
+            </span>
+
+                                Clear Cache
+        </span>
+        </a>
+    <a href="{% url 'services' %}" class="sidebar-link icon">
+        <span class="sidebar-link-label">
+
+            <span class="sidebar-link-icon icon-open-external">
+
+            </span>
+
+                                Services Dashboard
+        </span>
+        </a>
+
+    </span>
+{% endblock %}

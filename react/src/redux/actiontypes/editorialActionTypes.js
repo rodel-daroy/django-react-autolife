@@ -1,0 +1,4 @@
+export const GET_CMS_TEMPLATE_PREVIEW = "preview/CMS_TEMPLATE_PREVIEW";
+
+export const GET_CONTENT_INFO_REQUEST = "profile/GET_CONTENT_INFO_REQUEST";
+export const GET_CONTENT_INFO = "profile/GET_CONTENT_INFO";

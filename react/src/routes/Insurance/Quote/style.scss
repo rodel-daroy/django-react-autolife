@@ -1,0 +1,204 @@
+@import "../../../styles/_variables";
+@import "../style.scss";
+
+.insurancePage {
+  form {
+    max-width: 600px;
+  }
+
+  .insurance-stepperBtn.forward {
+    margin-right: 10px;
+  }
+  .insurance-stepperBtn.previous {
+    margin-left: 10px;
+  }
+  .form-group-line {
+    //height: 46px;
+  }
+  .label-light {
+    //font-family: neusanextpro;
+    font-size: 21px;
+    color: #232c3a;
+    line-height: 29px;
+  }
+  .helpBtn {
+    cursor: pointer;
+  }
+
+  .gender {
+    .btn-radio > div {
+      width: 100px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.insurance-title {
+  .insurance-subTitle {
+    padding-left: 0;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: 20px;
+  }
+}
+
+.insurance-results {
+  border: 1px solid #c2bfcc;
+  border-radius: 5px;
+  margin: 0px 0 20px;
+  width: 100%;
+  //padding: 30px;
+  .content {
+    margin-left: 20px;
+    h3 {
+      margin-top: 0px;
+    }
+    h4 {
+      margin-top: 0px;
+    }
+  }
+
+  .column-row:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 100%;
+  }
+  .col-1 {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    vertical-align: top;
+  }
+  .col-2 {
+    float: left;
+    width: 40%;
+    padding: 10px 0px;
+    vertical-align: top;
+  }
+  .col-3 {
+    width: 25%;
+    float: right;
+    height: 150px;
+    padding: 30px 20px 0;
+    text-align: center;
+    background-color: #f8f7f9;
+    vertical-align: top;
+  }
+}
+
+.insuranceContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &-body {
+    flex-grow: 100;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+  }
+
+  &-form {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  &-form-body {
+    flex-grow: 1;
+  }
+
+  .helpBox {
+    position: static;
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    &-body {
+      margin-right: 0;
+    }
+  }
+}
+
+.date-field,
+.vehicle-field {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: -12px;
+
+  .custom-dropdown {
+    min-width: 120px;
+    width: 100%;
+  }
+
+  .form-group {
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.date-field {
+  &-day,
+  &-month,
+  &-year {
+    flex-basis: auto;
+  }
+
+  &-day,
+  &-month {
+    flex-grow: 1;
+  }
+
+  &-year {
+    flex-grow: 2;
+  }
+}
+
+.vehicle-field {
+  width: 100%;
+
+  &-year,
+  &-make,
+  &-model {
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+
+  &-make {
+    flex-basis: 30%;
+  }
+
+  &-model {
+    flex-basis: 45%;
+  }
+}
+
+.suspension-period {
+  margin-top: 5px;
+
+  &-start,
+  &-end {
+    margin-bottom: 15px;
+
+    > label {
+      font-size: 85%;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.phone-link {
+  > .icon-phone {
+    margin-right: 4px;
+  }
+}
+
+.primary-use-field {
+  .custom-dropdown {
+    width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../../styles/_variables";
+@import "../../../styles/_typography";
+
+.search-page {
+  flex-grow: 1;
+
+  h1 {
+    @include headline-medium;
+  }
+
+  .trends-container {
+    margin-top: 40px;
+  }
+
+  .no-results {
+    color: $brand-darkgrey;
+  }
+}

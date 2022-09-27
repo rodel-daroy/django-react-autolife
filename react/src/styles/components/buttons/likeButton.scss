@@ -1,0 +1,25 @@
+.likeButtons {
+  //color: #16191c;
+  color: #747577;
+  display: inline;
+}
+
+.likeButtons {
+  ul {
+    padding: 0px;
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 10px;
+    li {
+      border-radius: 0px;
+      padding: 0px 10px 0px 0px;
+      margin-left: 0px;
+      margin-right: 10px;
+      border-right: 1px solid white;
+    }
+    li:last-child {
+      border-right: none;
+      border: none;
+    }
+  }
+}

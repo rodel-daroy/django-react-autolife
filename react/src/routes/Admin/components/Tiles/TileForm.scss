@@ -1,0 +1,39 @@
+@import 'styles/_variables';
+
+.tile-form {
+	&-asset-preview {
+		width: 250px;
+		padding: $content-padding 0;
+	}
+
+	&-article .custom-dropdown {
+		width: 400px;
+	}
+
+	&-sponsor .custom-dropdown {
+		width: 400px;
+	}
+
+	&-sponsor-option {
+    max-width: 100%;
+    max-height: calc(100% - 12px);
+	}
+
+	&-link {
+		margin-top: -18px;
+    display: block;
+		margin-bottom: 24px;
+		
+		&-or {
+			width: 400px;
+			text-align: center;
+			margin: .5em 0;
+			text-transform: uppercase;
+			color: $brand-darkgrey;
+		}
+	}
+
+	&-commands {
+		padding-top: 32px;
+	}
+}

@@ -1,0 +1,102 @@
+{% extends 'admin/base_site.html' %}
+{% block title %}
+    Autolife | Add Assets
+{% endblock %}
+{% include 'style.html' %}
+{% block content %}
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <h3 class="text-center"> Add Assets</h3>
+    <div class="container">
+        <a class="btn btn-default" href="{% url 'all_assets' %}">See All Assets</a><br/>
+        <div class="col-md-offset-3 col-md-6 ">
+            {% if errors %}
+                <code>{{ errors }}</code>
+            {% endif %}
+
+            <form action="{% url 'assets_url' %}" method="post" enctype="multipart/form-data" id="asset_form">
+                {% csrf_token %}
+                <table class="table table-striped table-bordered table-hover table-condensed" style="width: 100%">
+                    <tbody>
+
+
+                    {{ form.as_table }}
+
+                    <tr>
+                        <input type="hidden" name="content_count" id="content_count">
+                        <td class="field-name btn btn-primary" colspan="2"><input type="button" value="Submit" id="submit_form" style="width: auto"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="clearfix">
+
+            </div>
+            <div class="row" id="output">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var car_list = [];
+        $("#output").sortable();
+        $("#output").droppable({drop: Drop});
+        function Drop(event, ui) {
+            var draggableId = ui.draggable.attr("id");
+            console.log(car_list);
+            console.log(draggableId);
+            console.log(ui.position);
+            // var droppableId = $(draggableId).attr("id");
+            //console.log(droppableId);
+        }
+
+        function handleFileSelect(evt) {
+            var files = evt.target.files; // FileList object
+
+            // Loop through the FileList and render image files as thumbnails.
+            for (var i = 0, f; f = files[i]; i++) {
+
+                // Only process image files.
+                {#      if (!f.type.match('image.*')) {#}
+                {#        continue;#}
+                {#      }#}
+                document.getElementById('output').innerHTML = "";
+
+                var reader = new FileReader();
+                console.log(i);
+                // Closure to capture the file information.
+                reader.onload = (function(theFile) {
+                    return function(e) {
+                        // Render thumbnail.
+                        car_list.push(theFile.name);
+
+                        var span = document.createElement('div');
+                        $(span).addClass('col-md-3');
+                        $(span).attr("id",theFile.name);
+                        span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                            '" title="', escape(theFile.name), '" id="'+theFile.name+'"/>'].join('');
+                        $(span).css('width','300px');
+                        $('#output').append(span);
+                    };
+                })(f);
+
+                // Read in the image file as a data URL.
+                reader.readAsDataURL(f);
+            }
+        }
+
+        document.getElementById('id_content').addEventListener('change', handleFileSelect, false);
+        $("#submit_form").click(function () {
+            var results = '';
+            var childs = $("#output").children();
+            for(i=0; i<childs.length; i++){
+                div_id = $(childs[i]).attr("id");
+                results += div_id+",";
+            }
+            $("#content_count").val(results.toString());
+            console.log(results);
+            $("#asset_form").submit();
+        })
+    </script>
+{% endblock %}
+
+

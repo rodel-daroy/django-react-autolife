@@ -1,0 +1,28 @@
+@import 'styles/_variables';
+
+.auto-show-tile-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .auto-show-tile {
+        flex-basis: 50%;
+
+        &:nth-child(odd) {
+            .auto-show-tile-content {
+                margin-left: auto;
+            }
+        }
+
+        &:nth-child(even) {
+            .auto-show-tile-content {
+                margin-right: auto;
+            }
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        .auto-show-tile {
+            flex-basis: 100%;
+        }
+    }
+}

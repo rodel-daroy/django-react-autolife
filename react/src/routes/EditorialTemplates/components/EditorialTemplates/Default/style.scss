@@ -1,0 +1,23 @@
+@import "styles/_variables";
+
+.editorial-page {
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &-ad {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.sidebar {
+  max-width: 300px;
+  margin-right: 5vw;
+  margin-top: 56px;
+
+  > * {
+    margin-bottom: 10px !important;
+  }
+}

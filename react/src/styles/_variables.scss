@@ -1,0 +1,31 @@
+@import "./_colors";
+// Your bootstrap variable overrides
+@import "bootstrap/pre-customizations";
+// Core variables and mixins
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "./_Mixins";
+
+$main-nav-height: 102px;
+$main-mobile-nav-height: 102px;
+
+// this needs to match MOBILE_NAV_MAX_WIDTH in Header.js
+$mobile-nav-max-width: 1170px;
+
+$thumbnailWidth: 280px;
+$thumbnailImageHeight: 195px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+//$font-weight-bold: 700;
+
+$max-text-width: $container-sm;
+
+$offset-header: 100px;
+$offset-header-mobile: 65px;
+
+$tile-height: 350px;
+
+$content-margin: 24px;
+$content-padding: 12px;

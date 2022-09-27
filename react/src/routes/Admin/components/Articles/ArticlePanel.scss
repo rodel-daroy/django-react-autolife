@@ -1,0 +1,72 @@
+@import 'styles/_variables';
+
+.article-panel {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: none;
+  appearance: none;
+  text-align: left;
+  overflow: hidden;
+
+  &-header {
+    padding: 6px 20px;
+    margin-bottom: 6px;
+    background-color: rgba($brand-lightgrey, .4);
+  }
+
+  &-body {
+    flex-grow: 1;
+
+    color: $brand-darkgrey;
+    padding: 12px 20px;
+  }
+
+  &-footer {
+    margin-top: 6px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: flex-end;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    &-label {
+      color: darken($brand-darkgrey, 10%);
+      margin-top: 6px;
+      margin-bottom: 6px;
+      margin-right: 8px;
+    }
+
+    &-value {
+      color: lighten($brand-darkgrey, 10%);
+      text-align: right;
+    }
+  }
+
+  &-check-item {
+    .icon {
+      margin-right: 6px;
+
+      &:before {
+        width: 1.3em;
+      }
+
+      &-checkmark {
+        color: $brand-green;
+      }
+
+      &-x {
+        color: $brand-red;
+      }
+    }
+  }
+}

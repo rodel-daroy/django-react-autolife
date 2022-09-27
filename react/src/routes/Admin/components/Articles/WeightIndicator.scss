@@ -1,0 +1,83 @@
+@import 'styles/_variables';
+
+.weight-indicator {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px 6px;
+  min-width: 75px;
+
+  &-box {
+    align-self: stretch;
+
+    height: 16px;
+    background-color: $brand-white;
+    border: 1px solid $brand-lightgrey;
+    position: relative;
+  }
+
+  &-bar-offset {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    height: 100%;
+  }
+
+  &-bar {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: lighten($brand-green, 25%);
+  }
+
+  &-bar-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+
+    > div {
+      flex-grow: 1;
+
+      &:nth-child(even) {
+        background-color: rgba($brand-white, .5);
+      }
+    }
+  }
+
+  &.negative {
+    .weight-indicator {
+      &-bar-offset {
+        left: 0;
+        right: 50%;
+      }
+
+      &-bar {
+        left: auto;
+        right: 0;
+        background-color: lighten($brand-red, 25%);
+      }
+    }
+  }
+
+  &-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: .9em;
+    padding: .1em .3em;
+    color: $brand-black;
+    text-align: center;
+    font-size: .7em;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

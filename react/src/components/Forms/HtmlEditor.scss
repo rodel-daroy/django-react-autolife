@@ -1,0 +1,64 @@
+@import '~react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+
+@import 'styles/_variables';
+@import 'styles/_typography';
+@import 'styles/_editorial';
+
+.html-editor {
+  border: 1px solid $brand-lightgrey;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  max-height: 60vh;
+  height: 100vh !important;
+  padding: 0 !important;
+
+  > .rdw-editor-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .public-DraftEditorPlaceholder-root {
+    @include body-1;
+
+    padding: 1em;
+  }
+
+  &-text {
+    @extend .article-text;
+
+    padding: 0 !important;
+
+    div[data-block=true],
+    ol > li,
+    ul > li {
+      @include body-1;
+    }
+
+    div[data-block=true] br[data-text=true] {
+      display: none;
+    }
+
+    .public-DraftEditor-content {
+      outline: none !important;
+
+      padding: 1em;
+    }
+
+    .public-DraftStyleDefault-block {
+      margin: 0;
+    }
+  }
+
+  &-toolbar {
+    margin-bottom: 0 !important;
+    border: none !important;
+    border-bottom: 1px solid $brand-lightgrey !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+  }
+}

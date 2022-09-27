@@ -1,0 +1,34 @@
+@import 'styles/_variables';
+
+.article-form {
+  &-header {
+    background-color: $brand-darkblue;
+
+    &-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-evenly;
+      padding-top: 14px;
+      padding-bottom: 14px;
+
+      > * {
+        flex-basis: 0;
+        flex-grow: 1;
+        margin: 12px;
+        max-width: 450px;
+        min-width: 250px;
+      }
+    }
+  }
+
+  .command-bar {
+    z-index: 10;
+    background-color: $brand-white;
+  }
+
+  &-commands-inner {
+    display: flex;
+    justify-content: center;
+  }
+}

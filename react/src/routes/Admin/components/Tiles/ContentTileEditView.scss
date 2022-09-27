@@ -1,0 +1,17 @@
+.content-tile-edit-view {
+	position: relative;
+	padding-right: 18px;
+
+	&-modal {
+		&-modal-content {
+			display: flex;
+		}
+	}
+
+	&-insert {
+		&,
+		.responsive-modal-frame-content:not(.mobile) {
+			max-width: 800px;
+		}
+	}
+}

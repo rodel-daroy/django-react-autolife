@@ -1,0 +1,22 @@
+.article-field {
+	&-option {
+		line-height: normal;
+
+		height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+		&-heading {
+			font-size: .7em;
+			opacity: .6;
+			margin: .1em 0;
+		}
+
+		&-slug {
+			font-size: .9em;
+			margin: .1em 0;
+			text-transform: none;
+		}
+	}
+}

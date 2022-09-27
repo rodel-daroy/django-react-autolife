@@ -1,0 +1,34 @@
+@import "styles/_variables";
+
+.not-found-page {
+	flex-grow: 1;
+	min-height: 100vh;
+
+	background: {
+		image: url(./img/404.jpg);
+		position: left bottom;
+		size: cover;
+	}
+
+	display: flex;
+	flex-direction: column;
+
+	h1 {
+		color: $brand-white;
+	}
+
+	.btn.primary-button {
+		margin-top: 30px;
+	}
+
+	.text-container {
+		margin-top: auto;
+		margin-bottom: 10%;
+	}
+
+	@media (max-width: $screen-sm-max) {
+		.text-container {
+			margin-bottom: 5%;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+	def unhaggle_model(self):
+		for key, value in model_list.items():
+			for model, detail in value.items():
+				self.all_models.extend([model])
+		 		self.all_models = list(filter)
+			return self.all_models
+
+	def to_lower(self, val):
+		if isinstance(val, str):
+			return val.lower()
+		else:
+			return val
+
+
+
+
+			for makers, detail in value.items():
+				self.all_models.extend([detail])
+				return self.all_models

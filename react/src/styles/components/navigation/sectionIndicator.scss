@@ -1,0 +1,107 @@
+.section-indicator {
+  width: auto;
+  margin: 0 70px 0 0;
+  display: inline-block;
+  vertical-align: top;
+
+  > ul {
+    margin: 0 20px 0 0;
+    padding: 0px;
+    list-style: none;
+    font-weight: $font-weight-normal;
+    font-size: 16px;
+
+    > li {
+      width: 100%;
+      padding: 0;
+      margin: 0px;
+      font-size: 14px;
+      position: relative;
+      margin-bottom: 120px;
+
+      > .btn-link {
+        padding: 0;
+        border: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .btn-circle {
+        width: 32px;
+        height: 32px;
+        color: $brand-darkgrey;
+        vertical-align: top;
+        line-height: 1.2;
+        text-align: center;
+        padding: 6px 0 0 0px;
+        margin-right: 10px;
+        border-radius: 16px;
+        display: inline-block;
+        background-color: white;
+        position: relative;
+
+        > span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        > .icon-checkmark {
+          font-size: 10px;
+          top: 53%;
+          color: $brand-green;
+        }
+      }
+
+      .section-indicator-name {
+        text-align: left;
+        @include aside-title;
+      }
+
+      &:hover {
+        color: $brand-black;
+      }
+
+      &.active {
+        .btn-circle {
+          font-weight: $font-weight-medium;
+          border: 1px solid $brand-red;
+          color: $brand-darkblue;
+        }
+      }
+
+      &.sectionComplete {
+        &, .section-indicator-name:not(:hover) {
+          color: $brand-lightgrey;
+        }
+
+        .btn-circle {
+          border: 1px solid $brand-green;
+        }
+
+        &:after {
+          background-color: $brand-green;
+        }
+      }
+
+      &:after {
+        top: 100%;
+        left: 0px;
+        margin: 10px 0 10px 16px;
+        padding: 0px;
+        position: absolute;
+        display: block;
+        content: '';
+        width: 1px;
+        height: 100px;
+        background-color: $brand-lightgrey;
+        z-index: 0;
+      }
+
+      &:last-child:after {
+        height: 0px;
+      }
+    }
+  }
+}

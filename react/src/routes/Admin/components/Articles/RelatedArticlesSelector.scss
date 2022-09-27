@@ -1,0 +1,49 @@
+@import 'styles/_variables';
+
+.related-articles-selector {
+  display: flex;
+  margin: {
+    top: -18px;
+    bottom: -12px;
+    left: -20px;
+    right: -20px;
+  }
+
+  &-current, &-all {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 6px 16px;
+    padding-top: 12px;
+    overflow-x: hidden;
+
+    h5 {
+      text-transform: uppercase;
+    }
+  }
+
+  &-current {
+    border-right: 1px solid $brand-lightgrey;
+  }
+
+  &-list {
+    overflow: auto;
+    height: 580px;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    flex-direction: column;
+
+    &-current {
+      flex-basis: auto;
+
+      border-right: none;
+      border-bottom: 1px solid $brand-lightgrey;
+
+      > .related-articles-selector-list {
+        height: auto;
+      }
+    }
+  }
+}

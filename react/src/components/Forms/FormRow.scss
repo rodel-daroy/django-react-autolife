@@ -1,0 +1,9 @@
+.form-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  > .form-group {
+    margin-right: 24px;
+  }
+}

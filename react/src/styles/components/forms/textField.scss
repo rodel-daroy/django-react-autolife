@@ -1,0 +1,9 @@
+.text-field {
+	max-width: 400px;
+
+	.text-field-inner {
+		&.short {
+			width: 200px;
+		}
+	}
+}

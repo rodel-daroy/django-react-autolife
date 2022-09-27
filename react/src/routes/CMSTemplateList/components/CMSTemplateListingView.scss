@@ -1,0 +1,52 @@
+.cms-template-listing-view {
+  flex-grow: 1;
+
+  &-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: 50px;
+    margin-bottom: 24px;
+  }
+
+  &-template-name-filter {
+    flex-basis: 300px;
+
+    margin-bottom: 0;
+
+    .custom-dropdown {
+      width: 100%;
+      margin-left: -16px;
+    }
+  }
+
+  &-search {
+    flex-basis: 33%;
+    flex-grow: 1;
+    min-width: 200px;
+    padding: 18px 0;
+
+    margin-bottom: 0;
+
+    position: relative;
+  }
+
+  &-states {
+    display: flex;
+  }
+
+  &-table {
+    position: relative;
+
+    .table {
+      margin-bottom: 0;
+    }
+  }
+
+  &-actions {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}

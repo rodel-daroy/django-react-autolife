@@ -1,0 +1,89 @@
+$focus-outline-color: rgba($brand-darkgrey, .5);
+
+@mixin focus-outline($offset: 1px, $selectorSuffix: '') {
+	&:focus #{$selectorSuffix},
+	&.focus #{$selectorSuffix} {
+	    outline: .5px solid $focus-outline-color !important;
+	    outline-offset: $offset !important;
+	    box-shadow: none !important;
+	}
+
+	&:active #{$selectorSuffix},
+	&.active #{$selectorSuffix},
+	[data-whatinput='mouse'] &:focus #{$selectorSuffix} {
+		outline: 0 !important;
+		box-shadow: none !important;
+	}
+}
+
+$modal-animation-duration: .5s;
+
+@mixin modal-overlay($name, $color: $brand-darkblue, $opacity: .8) {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+
+  background-color: rgba($color, $opacity);
+
+  @keyframes #{$name}-fade-in {
+    0% {
+      background-color: rgba($color, 0);
+    }
+    100% {
+      background-color: rgba($color, $opacity);
+    }
+  }
+
+  @keyframes #{$name}-fade-out {
+    0% {
+      background-color: rgba($color, $opacity);
+    }
+    100% {
+      background-color: rgba($color, 0);
+    }
+  }
+
+  animation: {
+    name: #{$name}-fade-in;
+    duration: $modal-animation-duration;
+    fill-mode: forwards;
+  }
+
+  &.closing {
+    animation: {
+      name: #{$name}-fade-out;
+      duration: $modal-animation-duration;
+      fill-mode: forwards;
+    }
+  }
+}
+
+@mixin text-container {
+  max-width: $container-lg;
+  margin: 0 auto;
+  width: 100%;
+  padding: 30px 64px;
+
+  @media (max-width: $screen-md-max) {
+    /* padding: {
+      left: 16px;
+      right: 16px;
+    } */
+  }
+
+  @media (max-width: $screen-sm-max) {
+    padding: {
+      top: 16px;
+      bottom: 16px;
+      left: 30px;
+      right: 30px;
+    }
+  }
+}

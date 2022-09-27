@@ -1,0 +1,35 @@
+@import 'styles/_colors';
+
+.auto-show-a-spot {
+  .a-spot-body {
+    h1 em {
+      font-style: normal;
+      color: $brand-red;
+    }
+  }
+
+  &-logos {
+    position: absolute;
+    right: 70px;
+    bottom: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 32px;
+    max-width: 100%;
+
+    > img {
+      margin: 0 16px;
+      width: 100%;
+    }
+  }
+
+
+  @media (max-width: 1350px) {
+    &-logos {
+      position: static;
+    }
+  }
+}

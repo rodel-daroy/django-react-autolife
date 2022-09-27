@@ -1,0 +1,49 @@
+ol.breadcrumbs {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+
+  > li {
+    display: flex;
+    align-items: center;
+    margin-right: 3px;
+    &:after {
+      content: '/';
+      display: inline-block;
+      margin-left: 3px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &:after {
+        content: none;
+      }
+    }
+
+    > .crumb {
+      font-size: 12px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    > div.crumb {
+      &,
+      &:hover {
+        color: $brand-darkgrey;
+        cursor: default;
+      }
+    }
+
+    .icon-home:before {
+      margin-left: 0;
+    }
+  }
+
+  > li.home-crumb {
+    &:after {
+      content: none;
+    }
+  }
+}

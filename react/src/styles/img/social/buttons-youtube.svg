@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>buttons/social/youtube</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="buttons/social/youtube">
+            <g id="YouTube">
+                <rect id="Rectangle-3" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="36" height="36"></rect>
+                <rect id="Rectangle-3" fill="#FFFFFF" x="8.80645161" y="11.8387097" width="16.4516129" height="10.6451613"></rect>
+                <path d="M22.555759,18.0729732 L14.3523164,21.996832 C14.1336752,22.1015124 13.8812489,21.9417371 13.8812489,21.6987686 L13.8812489,13.6058786 C13.8812489,13.3593289 14.140542,13.1998292 14.359458,13.3111209 L22.5626259,17.4801521 C22.8068119,17.6041156 22.8024171,17.9550701 22.555759,18.0729732 M26.7695477,7 L9.2304523,7 C5.78959897,7 3,9.7974436 3,13.2485882 L3,22.0417344 C3,25.4926035 5.78959897,28.2903226 9.2304523,28.2903226 L26.7695477,28.2903226 C30.210401,28.2903226 33,25.4926035 33,22.0417344 L33,13.2485882 C33,9.7974436 30.210401,7 26.7695477,7" id="Fill-3" fill="#F61C0D"></path>
+            </g>
+        </g>
+    </g>
+</svg>

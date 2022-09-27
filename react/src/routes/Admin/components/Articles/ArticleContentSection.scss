@@ -1,0 +1,75 @@
+@import 'styles/_typography';
+
+.article-content-section {
+  &-head {
+    .form-control {
+      @include headline-medium;
+
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  &-subhead {
+    .form-control {
+      @include subheadline-1;
+
+      color: $brand-lightgrey !important;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  &-sidebar {
+    margin-top: 50px;
+    padding: 12px;
+  }
+
+  &-main {
+    padding-right: 73px;
+  }
+
+  &-a-spot {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-top: -75px;
+  }
+
+  &-b-controls {
+    padding: 24px 0;
+  }
+
+  &-sponsor {
+    max-width: 100%;
+    max-height: calc(100% - 12px);
+  }
+
+  .content-container {
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    &-body {
+      .form-control {
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    &-head,
+    &-subhead {
+      .form-control {
+        text-align: left;
+      }
+    }
+
+    &-main {
+      padding: 12px;
+    }
+  }
+}

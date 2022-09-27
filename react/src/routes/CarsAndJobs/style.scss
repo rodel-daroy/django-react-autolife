@@ -1,0 +1,65 @@
+@import "styles/_variables";
+
+.cars-and-jobs-content {
+	.article-text {
+		font-size: 18px;
+		font-weight: $font-weight-light;
+
+		> p {
+			padding-right: 0;
+		}
+
+		h3 {
+			margin-top: 74px;
+		}
+	}
+
+	ul.industry-sectors {
+	    list-style-type: none;
+	    padding: 0;
+	    margin: 0;
+	    margin-top: 30px;
+		margin-bottom: 74px;
+	    display: flex;
+	    flex-wrap: wrap;
+
+	     > li {
+		    flex-basis: 50%;
+		    flex-grow: 1;
+		    padding-left: 6px;
+		    padding-right: 6px;
+
+		    .btn.primary-button {
+			    width: 100%;
+			    margin-left: 0;
+			    margin-right: 0;
+			}
+		}
+	}
+
+	ul.commands {
+		margin-top: 60px;
+		margin-bottom: 100px;
+		flex-wrap: wrap;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		ul.industry-sectors {
+			> li {
+				flex-basis: 100%;
+			}
+		}
+
+		ul.commands {
+			> li {
+				flex-basis: 100%;
+
+				.btn.primary-button {
+					width: 100%;
+					padding-left: 12px;
+					padding-right: 12px;
+				}
+			}
+		}
+	}
+}

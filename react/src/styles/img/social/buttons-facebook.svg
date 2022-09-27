@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>buttons/social/facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="buttons/social/facebook">
+            <rect id="Rectangle-3" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="36" height="36"></rect>
+            <g id="Facebook" transform="translate(3.000000, 3.000000)">
+                <g id="Group-3" fill="#39579A">
+                    <path d="M30,15 C30,23.283774 23.2845416,30 14.9995055,30 C6.71545841,30 0,23.283774 0,15 C0,6.71622602 6.71545841,0 14.9995055,0 C23.2845416,0 30,6.71622602 30,15" id="Fill-1"></path>
+                </g>
+                <path d="M18.9837442,9.74065736 C18.9837442,9.74065736 16.9597602,9.539657 16.4531646,10.3125923 C16.176016,10.7347728 16.3404397,11.9715755 16.3161892,12.8597475 L19,12.8597475 C18.7734843,13.8982051 18.610926,14.6021047 18.4441039,15.5008976 L16.3009993,15.5008976 L16.3009993,24 L12.5824117,24 C12.5829447,21.3798262 12.5818787,18.3228683 12.5824117,15.5340878 L11,15.5340878 L11,12.8597475 L12.5648235,12.8597475 C12.6450366,10.904707 12.6754164,8.96719098 13.6499667,7.98077574 C14.7457695,6.87195473 15.7906729,7.00498138 18.9837442,7.00498138 L18.9837442,9.74065736 Z" id="Fill-1" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

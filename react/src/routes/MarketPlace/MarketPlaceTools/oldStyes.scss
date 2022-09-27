@@ -1,0 +1,318 @@
+
+/********future value ********/
+/* trading section */
+.trade_val_sec {
+	float: left;
+	width: 100%;
+	margin: 15px 0;
+	/*border: 1px solid #CED0D4;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-ms-border-radius: 3px 3px 3px 3px;*/
+}
+.trade_val_sec .trade_val1 {
+	float: left;
+	padding:0;
+	width: 100%;margin-bottom:30px;
+	background:#e2e3e3;border-radius:3px 3px 3px 3px;
+	-moz-border-radius:3px 3px 3px 3px; -webkit-border-radius:3px 3px 3px 3px;
+	-ms-border-radius:3px 3px 3px 3px;
+}
+.trade_val_sec .trade_val1:last-child {
+	border-right: 0;
+}
+.trade_val_sec .low_Price {
+	float: left;
+	background: #59DF70;
+	padding: 5px 14px;
+	width: auto;
+	height: 24px;
+	border-radius: 6px 0px 0px 6px;
+	position: relative;
+}
+.trade_val_sec .low_Price::after {
+	border-bottom: 12px solid transparent;
+	border-left: 12px solid #59df70;
+	border-top: 12px solid transparent;
+	content: "";
+	height: 0;
+	position: absolute;
+	right: -12px;
+	top: 0;
+	width: 0;
+}
+.trade_val_sec .low_Price i {
+	color: #fff;
+	font-size: 14px;
+	transform: rotate(-234deg);
+	-moz-transform: rotate(-234deg);
+	-webkit-transform: rotate(-234deg);
+	-ms-transform: rotate(-234deg);
+	position: relative;
+	top: 2px;
+}
+.trade_val_sec .low_Price em {
+	position: relative;
+	top: 1px;
+	font-size: 13px;
+	display: inline-block;
+	left: 10px;
+	color: #fff;
+	font-style: normal;
+	font-family: 'Conv_Neusa Regular';
+	font-weight: bold;
+}
+.trade_val_sec p {
+	float: right;
+font-size: 28px!important;
+font-weight: 400;
+/* margin-right: 100px; */
+position: relative;
+top: 39px;
+right: 240px;
+}
+#high-price.trade_val1 .low_Price {
+	float: left;
+	background: #FF3B45;
+	padding: 5px 14px;
+	width: auto;
+	height: 24px;
+	border-radius: 6px 0px 0px 6px;
+	position: relative;
+}
+#high-price.trade_val1 .low_Price::after {
+	border-bottom: 12px solid transparent;
+	border-left: 12px solid #FF3B45;
+	border-top: 12px solid transparent;
+	content: "";
+	height: 0;
+	position: absolute;
+	right: -12px;
+	top: 0;
+	width: 0;
+}
+#high-price.trade_val1 .low_Price i {
+	color: #fff;
+	font-size: 14px;
+	transform: rotate(-300deg);
+	-moz-transform: rotate(-300deg);
+	-webkit-transform: rotate(-300deg);
+	-ms-transform: rotate(-300deg);
+	position: relative;
+	top: 2px;
+}
+
+.trade_val_sec ul li{ display:inline-block; text-align:center;}
+.trade_val_sec ul{ margin:0; padding:15px 0; display:block; text-align:center;}
+.trade_val_sec ul li { font-size:18px;font-weight:bold; color:#000; margin-bottom:15px;width:19%;
+	font-family: 'Conv_Neusa Regular';}
+	.trade_val_sec ul li span {
+  background: transparent ;
+  border: 0 none;
+  color: #a9abad;
+  display: block;
+  font-weight: normal;
+  height: auto;
+  margin: 0 0 15px; font-size:14px;
+  text-transform: uppercase;
+  width: auto;
+}
+.trade_val_sec ul li:after{ display:none;}
+/* trading section */
+
+/*avg-asking-price */
+.trade_val_sec .low_Price1 {
+	float: left;
+	background: #9b9b9b;
+	padding: 5px 30px;
+	width: auto;
+	height: 100px;
+	border-radius: 6px 0px 0px 6px;
+	position: relative;
+	font-family: Roboto;
+}
+
+.trade_val_sec .low_Price1::after {
+	border-bottom: 50px solid transparent;
+	border-left: 50px solid #9b9b9b;
+	border-top: 50px solid transparent;
+	content: "";
+	height: 0;
+	position: absolute;
+	right: -50px;
+	top: 0;
+	width: 0;
+}
+.trade_val_sec .low_Price1 em{color: #fff;
+    line-height: 100px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;}
+
+    .trade_val_sec#val_trade {
+      float: left;
+      width: 100%;
+      margin: 15px 0;
+      border: 1px solid #CED0D4;
+      border-radius: 3px 3px 3px 3px;
+      -moz-border-radius: 3px 3px 3px 3px;
+      -webkit-border-radius: 3px 3px 3px 3px;
+      -ms-border-radius: 3px 3px 3px 3px;
+    }
+    .trade_val_sec#val_trade .trade_val1 {
+      float: left;margin-bottom:0;
+      padding: 50px 50px 10px;
+      width: 50%;background:transparent;
+      border-right: 1px solid #CED0D4
+    }
+    .trade_val_sec#val_trade .trade_val1:last-child {
+      border-right: 0;
+    }
+    .trade_val_sec#val_trade p {
+      float: right;
+      font-size: 24px!important;
+      font-family: 'Conv_Neusa Regular';
+      font-weight: bold;top:0;right:0;
+    }
+    .trade_val_sec#val_trade ul li{ display:inline-block; text-align:center;}
+    .trade_val_sec#val_trade ul{ margin:0; padding:15px 0; display:block; text-align:center;border-top:1px solid #ced0d4;}
+    .trade_val_sec#val_trade ul li { font-size:18px;font-weight:bold; color:#000; margin-bottom:15px;width:24%;
+      font-family: 'Conv_Neusa Regular';}
+      .trade_val_sec#val_trade ul li span {
+      background: transparent ;
+      border: 0 none;
+      color: #a9abad;
+      display: block;
+      font-weight: normal;
+      height: auto;
+      margin: 0 0 15px; font-size:14px;
+      text-transform: uppercase;
+      width: auto;
+    }
+    .trade_val_sec#val_trade ul li:after{ display:none;}
+
+
+  /********future value ********/
+.future-value h6 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #000;
+	font-family: 'Conv_Neusa Regular';
+}
+.future-value img {
+	float: left;
+	width: 100%;
+	margin: 0 0 20px;
+}
+.future-value .middle-info {
+	border-top: 0 none;
+	float: left;
+	margin: 0;
+	padding: 10px 0 40px;
+}
+.future-value .right-info-btn {
+	margin-right: 20px;
+}
+.future-value a.start_ovr {
+	font-size: 15px;
+	color: #ed222c;
+	font-family: 'Conv_Neusa Regular';
+	margin: 15px 0;
+	display: block;
+}
+.future-value a.start_ovr i {
+	border: 1px solid #ed222c;
+	border-radius: 100%;
+	color: #ed222c;
+	font-size: 15px;
+	height: 25px;
+	left: 15px;
+	line-height: 23px;
+	position: relative;
+	text-align: center;
+	transition: background 500ms ease-in-out 0s;
+	width: 25px;
+}
+.future-value a i:hover {
+	color: #fff;
+	background: #ed222c;
+}
+.future-value h3 {
+	border-bottom: 2px solid #ced0d4;
+	display: inline-block;
+	width: 100%;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 40px 0;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+	color: #232C3A;
+	font-family: "Neusa Next Pro";
+	line-height: 30px;
+}
+
+.f_value_right h3 {
+	border-bottom: 1px solid #ced0d4;
+	color: #000;
+	display: inline-block;
+	font-size: 21px;
+	font-weight: 400;
+	margin: 12px 0 20px;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+	width: 100%;
+}
+.f_value_right img {
+	margin: 30px 0 0;
+}
+.future-value ul li {
+	display: inline-block;
+	float: left;
+	text-align: left;
+	width: 25%;
+	position: relative;
+}
+.future-value ul {
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+	margin: 15px 0 40px;
+}
+.future-value ul li a {
+	font-size: 17px;
+	color: #000;
+	font-weight: 400;
+	width: 25%;
+	display: block;
+}
+.future-value ul li span {
+	display: block;
+	color: #000;
+	background: #000;
+	width: 15px;
+	margin: 0 auto 10px;
+	height: 15px;
+	border-radius: 100%;
+	margin-bottom: 10px;
+}
+.future-value ul li a.actV {
+	color: #d80000;
+}
+.future-value ul li:last-child::after {
+	display: none;
+}
+.future-value ul li::after {
+	background: #ccc;
+	content: "";
+	height: 2px;
+	left: 29%;
+	position: absolute;
+	top: 33px;
+	width: 66%;
+}
+.future-value img.slide_strip {
+	float: left;
+	width: auto;
+}

@@ -1,0 +1,46 @@
+<SCI schemaVersion="4.0" xmlns:SciB="http://www.scitorque.com/Schema/BusinessBaseType">
+    <Lead LeadClassName="Sales" Status="new">
+        <LeadClassification>New</LeadClassification>
+        <Requestdate>2018-01-19 06:32:37.342721</Requestdate>
+        <ReceivedDate>2018-01-19 06:32:37.342721</ReceivedDate>
+        <Vehicle Interest="buy" Status="new">
+            <Year>2015</Year>
+            <Make>Audi</Make>
+            <Model>A4</Model>
+            <Trim>""</Trim>
+            <Price Type="msrp" Currency="USD">14450</Price>
+            <Bodystyle>4D Sedan</Bodystyle>
+            <Id>292872</Id>
+        </Vehicle>
+        <Customer Type="individual">
+            <Contact>
+                <Name Part="first" Type="individual">First Name</Name>
+                <Name Part="last" Type="individual">Last Name</Name>
+                <EMail PreferredContact="1" SCI="OK">user@gmail.com</EMail>
+                <Phone Type="voice" Time="day" PreferredContact="1" ChannelCode="Business Phone" SCI="OK">
+                    <Number>""</Number>
+                    <Extension/>
+                </Phone>
+                <Address SCI="OK" Type="home">
+                    <PostalCode>L4B 3K5</PostalCode>
+                    <Country CountryCode="CA">CANADA</Country>
+                </Address>
+            </Contact>
+            <CurrentlyOwned/>
+        </Customer>
+        <Vendor>
+            <Id>999</Id>
+            <Vendorname>dealerName</Vendorname>
+            <DealerID>60067</DealerID>
+        </Vendor>
+        <Provider>
+            <Id Source="Mazda">600002</Id>
+            <Name Part="full" Type="company">MazdaDlrTestDr</Name>
+            <Service>MTDrive</Service>
+        </Provider>
+        <MiscData>
+            <BusinessIndicator>Retail</BusinessIndicator>
+        </MiscData>
+        <LeadSourceName>Mazda Canada Book a Test Drive</LeadSourceName>
+    </Lead>
+</SCI>

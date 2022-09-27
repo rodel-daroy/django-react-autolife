@@ -1,0 +1,11 @@
+.article-tagging-panel {
+  &-weights {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    
+    > .weight-indicator {
+      flex-basis: 50%;
+    }
+  }
+}

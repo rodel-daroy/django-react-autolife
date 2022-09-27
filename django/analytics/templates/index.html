@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    ANALYTICS | DASHBOARD
+{% endblock %}
+{% block head_css %}
+    <link href="{% static 'assets/web-analytics/style.css' %}" rel="stylesheet">
+{% endblock %}
+{% block head_scripts %}
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["username"].value;
+  var y = document.forms["myForm"]["userid"].value;
+  var f = document.forms["myForm"]["from"].value;
+  var t = document.forms["myForm"]["to"].value;
+  var s=document.forms["myForm"]["datefilter"].value;
+
+  if ((x === "") && (y==="") &&(f==="")&&(t==="")&&(s===""))  {
+      alert('Search criteria is missing');
+      return false;
+
+
+  }
+}
+
+
+function changeselect() {
+    document.getElementById('datefiltertype').value = '{{ datefilter }}';
+
+
+}
+
+
+
+</script>
+
+{% endblock %}
+{% block body %}
+    <body onload="changeselect()"></body>
+
+    <br/>
+    <div class="container">
+        <div class="page-content-toggle" id="page-content-wrapper">
+            <div class="main-container">
+                <br/>
+                <span><a href="{% url 'analytics home' %}" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal">Analytics</a></span>
+                <span><a href="{% url 'all user json data' %}"  target="_blank" class="btn btn-sm btn-primary" style="margin-left: 800px" data-toggle="modal" data-target="#myModal">Export All Users Data <i class="fa fa-download"></i></a></span>
+
+                <hr class="divider"/>
+
+                <div class="row m-b-1">
+
+                    <div class="col-md-12">
+                        <div class="card card-block">
+
+                            <h4 class="card-title m-b-2"><b>Total Autolife Users - {{ user_count }}</b></h4>
+                        <form id ="myForm" action="{% url 'user search' %}" onsubmit="return validateForm()" method='post'>
+                            {% csrf_token %}
+                            <div id="d1" style="height: 100px;width: 200px;float: left;margin-left: 0px">
+                                <label for="userid" > UserID</label>
+
+                                <input type="number" name="userid" min="0" value="{{ userid }}" id="userid" style="width: 100px;margin-left: 33px">
+                                <label for="username" style="margin-top: 20px"> Username</label>
+                                <input type="text" name="username" value="{{ username }}" id="username" style="margin-left: 10px;width: 100px">
+
+
+                            </div>
+
+                            <div  id="d2" style="width: 500px;height: 100px;float: left;margin-left: 410px">
+
+                                <label for="datefiltertype"  style="margin-left: 10px">Choose a Filter For Date Range:</label>
+                                <select id="datefiltertype" value="{{ datefilter }}" name ="datefilter" style="width: 150px;margin-left: 30px">
+                                    <option value="">Chosse here..</option>
+                                    <option value="1">Date of joined</option>
+                                    <option value="2">Last Login</option>
+                                </select>
+
+                                <label for="from" style="margin-left: 10px">Enter From Date :</label>
+                                <input type="date" name="from" value="{{ from }}" id="from" style="width: 150px;margin-left: 10px"><br>
+                                <label for="to" style="margin-left: 10px    ">Enter To Date : </label>
+                                <input type="date" name="to" value="{{ to }}" id="to" style="width: 150px;margin-left: 27px">
+                            </div>
+
+                            <button type="submit" id="submitBtn" style="width: 100px;margin-left: 39%;margin-bottom: 10px" onclick="test()">Search</button>
+                        </form>
+                            <table class="table " id ="myTable">
+                                <thead class="thead-dark">
+                                <tr >
+                                    <th scope="col">ID<i class="fa fa-fw fa-sort"></i></th>
+                                    <th scope="col">Username<i class="fa fa-fw fa-sort"></i></th>
+                                    <th scope="col">Date Joined<i class="fa fa-fw fa-sort"></i></th>
+                                    <th scope="col">Last Visit On<i class="fa fa-fw fa-sort"></i></th>
+                                    <th scope="col">Active Status<i class="fa fa-fw fa-sort"></i></th>
+                                    <th scope="col">User Journey<i class="fa fa-fw fa-sort"></i></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                 <tr>
+                                        {%  if profile %}
+
+                                        <th scope="row">{{ profile.id }}</th>
+                                        <td>{{ profile.username }}</td>
+                                        <td>
+                                            {% if not profile.date_joined == None %}
+                                                {{ profile.date_joined }}
+                                            {% else %}
+                                                <i class="fa fa-times-circle fa-red"></i>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if not profile.last_login == None %}
+                                                {{ profile.last_login }}
+                                            {% else %}
+                                                <i class="fa fa-times-circle fa-red"></i>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if profile.is_active %}
+                                            <i class="fa fa-check-circle-o fa-green"></i>
+                                            {% else %}
+                                            <i class="fa fa-times-circle fa-red"></i>
+                                            {% endif %}
+                                        </td>
+                                        <td><a href="{% url 'user journey' profile.id %}">Preview</a></td>
+                                    {% endif %}
+                                    </tr>
+
+                                {% for user in profiles %}
+                                    <tr>
+
+                                        <th scope="row">{{ user.id }}</th>
+                                        <td>{{ user.username }}</td>
+                                        <td>
+                                            {% if not user.date_joined == None %}
+                                                {{ user.date_joined }}
+                                            {% else %}
+                                                <i class="fa fa-times-circle fa-red"></i>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if not user.last_login == None %}
+                                                {{ user.last_login }}
+                                            {% else %}
+                                                <i class="fa fa-times-circle fa-red"></i>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if user.is_active %}
+                                                <span style="display:none">{{ True }}</span><span class="fa fa-check-circle-o fa-green"></span>
+
+                                            {% else %}
+                                               <span style="display: none">{{ False }}</span><span class="fa fa-check-circle-o fa-red"></span>
+                                            {% endif %}
+                                        </td>
+                                        <td><a href="{% url 'user journey' user.id %}">Preview</a></td>
+
+                                    </tr>
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <hr class="divider"/>
+                <!-- /3rd row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /page-content-wrapper -->
+    </div>
+
+{% if alert %}
+    <script type="text/javascript">
+alert ('{{ alert }}')
+</script>
+{% endif %}
+
+
+  <script type="text/javascript">
+    var $ = jQuery;
+      $(document).ready(function() {
+          $("#myTable").tablesorter(
+
+          );
+      });
+
+  </script>
+
+
+
+
+{% endblock %}

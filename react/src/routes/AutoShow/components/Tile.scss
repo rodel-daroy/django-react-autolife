@@ -1,0 +1,32 @@
+@import 'styles/_variables';
+@import 'styles/_typography';
+
+.auto-show-tile {
+    &-image {
+        width: 100%;
+        height: auto;
+    }
+
+    &-content {
+        padding: 30px 64px;
+        padding-bottom: 64px;
+        max-width: 735px;
+        width: 100%;
+
+        h3 {
+            @include editorial-tile-title
+        }
+
+        p {
+            @include editorial-tile-body;
+            color: $brand-darkgrey;
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        &-content {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}

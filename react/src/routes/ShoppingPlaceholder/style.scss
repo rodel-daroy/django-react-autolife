@@ -1,0 +1,38 @@
+@import "styles/_variables";
+
+.shopping-placeholder {
+	flex-grow: 1;
+	min-height: 100vh;
+
+	background: {
+		image: linear-gradient(rgba($brand-darkblue, .5), rgba($brand-darkblue, .5)), url(./img/404.jpg);
+		position: 70% center;
+		size: cover;
+	}
+
+	display: flex;
+	flex-direction: column;
+
+	.text-container {
+		> h1 {
+			color: $brand-white;
+			text-transform: uppercase;
+		}
+
+		> h2 {
+			color: $brand-lightgrey;
+			font-size: 26px;
+		}
+	}
+
+	.text-container {
+		margin-top: 12vh;
+		margin-bottom: 12vh;
+	}
+
+	@media (max-width: $screen-sm-max) {
+		.text-container {
+			margin-bottom: 5%;
+		}
+	}
+}

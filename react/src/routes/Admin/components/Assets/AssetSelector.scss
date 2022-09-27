@@ -1,0 +1,42 @@
+@import 'styles/_variables';
+
+.asset-selector {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: -12px;
+
+	&-assets {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	&-asset {
+		flex-basis: 10%;
+		flex-grow: 0;
+		flex-shrink: 0;
+		min-width: 140px;
+
+		appearance: none;
+		border: none;
+		background: none;
+		padding: 18px;
+		position: relative;
+		cursor: pointer;
+
+		border: 2px solid transparent;
+		border-radius: 5px;
+
+		&.selected {
+			border-color: $brand-red;
+		}
+
+		&:hover {
+			background-color: $brand-red;
+			border-color: $brand-red;
+
+			&, * {
+				color: $brand-white;
+			}
+		}
+	}
+}

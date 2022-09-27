@@ -1,0 +1,116 @@
+@import 'styles/_typography';
+
+.recall-list {
+  &-item {
+    &-stats {
+      list-style-type: none;
+      margin: 8px 0;
+      padding: 0;
+      width: 100%;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &-stat {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+
+      &-label {
+        flex-basis: 30%;
+        font-size: 12px;
+        font-weight: $font-weight-normal;
+        color: $brand-darkgrey;
+        text-transform: uppercase;
+      }
+
+      &-value {
+        flex-basis: 70%;
+        color: $brand-black;
+        text-transform: none;
+        font-size: 16px;
+        font-weight: $font-weight-light;
+      }
+    }
+
+    &-summary {
+      max-width: $max-text-width;
+
+      strong {
+        font-weight: $font-weight-normal;
+      }
+    }
+
+    &-body {
+      display: flex;
+    }
+
+    &-image {
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 33.33%;
+      padding-top: 24px;
+
+      &-inner {
+        width: 100%;
+        padding-top: 60%;
+        height: 0;
+        position: relative;
+
+        background: {
+          repeat: no-repeat;
+          position: center;
+        }
+      }
+    }
+
+    &-text-outer {
+      padding-right: 24px;
+    }
+
+    &-text {
+      margin-top: 18px;
+      margin-bottom: 48px;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -18px;
+        left: -24px;
+        right: -24px;
+        bottom: -18px;
+        background-color: rgba($brand-lightgrey, .2);
+        pointer-events: none;
+      }
+
+      &:nth-child(odd) {
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-md-max) {
+    &-item {
+      &-text-outer {
+        padding-right: 0;
+      }
+
+      &-text {
+        &:before {
+          left: -32px;
+          right: -32px;
+        }
+      }
+
+      &-image {
+        display: none;
+      }
+    }
+  }
+}

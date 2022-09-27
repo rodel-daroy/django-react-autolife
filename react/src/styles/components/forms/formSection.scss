@@ -1,0 +1,41 @@
+.form-section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  &-header {
+  	padding-top: 20px;
+  	padding-bottom: 20px;
+
+  	&:first-child {
+  		border-top: 1px solid $brand-lightgrey;
+  	}
+
+  	h3 {
+      @include title-1;
+  		margin-top: 0;
+  		margin-bottom: 0;
+  	}
+  }
+
+  &.first {
+    padding-top: 0;
+
+  	.form-section-header {
+  		border-top: none !important;
+  		padding-top: 0;
+  	}
+  }
+
+  &.nested {
+  	padding-left: 20px;
+  	padding-right: 20px;
+    padding-bottom: 24px;
+  	margin-bottom: 20px;
+
+  	background-color: rgba($brand-lightgrey, .2);
+  }
+
+  &.last {
+    margin-bottom: 0 !important;
+  }
+}

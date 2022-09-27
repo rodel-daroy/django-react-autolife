@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+ <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.widgets.min.js"></script>
+ <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
+    </script>
+    <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!---  CSS --->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        {
+            font-family: 'Open Sans', sans-serif;
+        }
+        * {
+          font-family: "Open Sans";
+        }
+    </style>
+    {% block head_css %}
+    {% endblock %}
+    <!--- JS --->
+
+
+
+
+    {% block head_scripts %}
+    {% endblock %}
+    {% include 'style.html' %}
+
+</head>
+<body>
+<!-------------------------- MODAL --------------->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------- MODAL ENDS HERE --------->
+<!-- Just an image -->
+<nav class="navbar navbar-light bg-analytics navbar-fixed-top fixed">
+    <a class="navbar-brand" href="{% url 'analytics home' %}">
+        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMDMuNiAyMzAuOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjAzLjYgMjMwLjg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRjQyNTM0O30KCS5zdDF7ZmlsbDojMjIyOTQ0O30KPC9zdHlsZT4KPGcgaWQ9Ikljb24iPgoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMTYuNiwyNS4zIDEwNCwwIDEwLjksMTc4LjYgMzYuNywxNzguNiAJIi8+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjE5NS41LDE3OC42IDEyOS44LDUyLjIgMTE3LDc3LjEgMTQzLjEsMTI3LjQgOTYsMTI3LjQgODIuNSwxNTMuMSAxNTYuNSwxNTMuMSAxNjkuOCwxNzguNiAJIi8+CjwvZz4KPC9zdmc+Cg=="
+             width="30" height="30" alt="" class="logo">
+        <b class="analytics-title">ANALYTICS DASHBOARD</b>
+    </a>
+    <span class="navbar-text-inside">
+        {% if not request.user.is_superuser %}
+            <a href="#">Login</a>
+        {% else %}
+            Welcome, {{ request.user | title }}
+        {% endif %}
+  </span>
+</nav>
+{% if request.user.is_superuser %}
+    {% block body %}
+    {% endblock %}
+{% else %}
+    <h3 class="text-center navbar-text-inner">
+        You don't have permission to see this dashboard, Report this to your Administrator.
+    </h3>
+{% endif %}
+
+{{ form.media }}
+</body>
+</html>

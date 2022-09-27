@@ -1,0 +1,107 @@
+@import "styles/_variables";
+@import "styles/_typography";
+
+.insurance-title {
+  h1 {
+    position: relative;
+    padding-left: 6rem;
+
+    @include headline-medium;
+
+    margin-right: 0px;
+    display: inline-block;
+
+    &:before {
+      content: url("./img/insurance.svg");
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .insurance-subTitle {
+    padding-top: 2rem;
+    border-top: 2px solid $brand-lightgrey;
+    color: $brand-darkgrey;
+
+    @include subheadline-1;
+  }
+}
+
+.insurance-content {
+  margin-top: 46px;
+  margin-bottom: 46px;
+
+  .helpBox {
+    position: static;
+    margin: 0 auto;
+    margin-bottom: 85px;
+  }
+
+  .article-text h2,
+  .article-text h3,
+  .quote-button,
+  .helpBox {
+    margin-top: 74px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .helpBox {
+      width: 100%;
+    }
+  }
+}
+
+.insurance-step {
+  @include aside-title;
+
+  color: $brand-darkgrey;
+}
+
+.insurance-page-a-spot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-button {
+    padding-right: 26px;
+    border-right: 1px solid $brand-lightgrey;
+  }
+
+  &-phone {
+    padding-left: 26px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+    margin-left: -18px;
+    margin-right: -18px;
+
+    > p {
+      margin-bottom: -10px;
+      font-size: 13px;
+    }
+
+    .insurance-phone {
+      transform: scale(.8);
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    justify-content: flex-start;
+
+    &-button {
+      border-right: none;
+      padding-right: 0;
+
+      .quote-button {
+        margin-left: 0;
+      }
+    }
+
+    &-phone {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import 'styles/_variables';
+
+.article-publishing-panel {
+  .article-panel-header {
+    text-transform: uppercase;
+  }
+
+  &.publish-state-1 .article-panel-header {
+    background-color: rgba($brand-red, .7);
+  }
+
+  &.publish-state-2 .article-panel-header {
+    background-color: rgba($brand-yellow, .7);
+  }
+
+  &.publish-state-3 .article-panel-header {
+    background-color: rgba($brand-green, .7);
+  }
+
+  &.publish-state-4 .article-panel-header {
+    color: $brand-red;
+  }
+
+  &-overlay {
+    .responsive-modal {
+      overflow: visible;
+    }
+  }
+
+  &-modal {
+    overflow: visible !important;
+  }
+
+  &-unpublish-date {
+    &.past {
+      text-decoration: line-through;
+    }
+
+    > .icon {
+      margin-right: .3em;
+    }
+  }
+}

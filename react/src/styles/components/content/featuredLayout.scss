@@ -1,0 +1,29 @@
+@import '_variables';
+
+.featured-layout {
+    &-head {
+        padding-bottom: 0 !important;
+    }
+
+    &-share-large {
+        position: absolute;
+    }
+
+    &-share-small {
+        display: none;
+
+        .h6 {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1350px) {
+        &-share-large {
+            display: none;
+        }
+
+        &-share-small {
+            display: block;
+        }
+    }
+}

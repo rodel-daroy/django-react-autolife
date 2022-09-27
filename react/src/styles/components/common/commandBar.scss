@@ -1,0 +1,44 @@
+.command-bar {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  .command-bar-inner {
+    position: relative;
+    background-color: $brand-lightgrey;
+
+    visibility: hidden;
+    transform: translateY(100%);
+
+    transition: transform .5s, visibility 0s .5s;
+  }
+
+  .command-bar-content {
+    @extend .text-container;
+
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+
+  &.active {
+    .command-bar-inner {
+      visibility: visible;
+      transform: none;
+
+      transition: transform .5s;
+    }
+  }
+
+  &.sticky {
+    overflow: visible;
+
+    .command-bar-inner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}

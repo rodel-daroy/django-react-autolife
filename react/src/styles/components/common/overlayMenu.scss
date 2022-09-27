@@ -1,0 +1,64 @@
+
+.overlay-menu {
+  width: 100%;
+  height: 100%;
+  background: none;
+  overflow: auto;
+  color: $brand-white;
+
+  @keyframes overlay-menu-pop-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes overlay-menu-pop-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  animation: {
+    name: overlay-menu-pop-in;
+    duration: $modal-animation-duration / 2;
+  }
+
+  &.closing {
+    animation: {
+      name: overlay-menu-pop-out;
+      duration: $modal-animation-duration / 2;
+      fill-mode: forwards;
+    }
+  }
+
+  .overlay-menu-inner {
+    padding: 30px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .overlay-menu-nav {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn-link {
+      margin-right: -12px;
+    }
+  }
+
+  /* .btn-link {
+    color: $brand-white;
+  } */
+}
+
+.menu-modal-overlay {
+  @include modal-overlay('menu-modal-overlay', $opacity: 1);
+}

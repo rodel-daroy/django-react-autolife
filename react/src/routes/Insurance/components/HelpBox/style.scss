@@ -1,0 +1,35 @@
+@import "../../../../styles/_variables";
+@import "../../../../styles/_typography";
+
+.helpBox {
+  width:350px;
+  //height:300px;
+  margin: 40px 0 0 0;
+  position: absolute;
+  top:150px;
+  right:0px;
+  background-color: rgba($brand-lightgrey, 0.2);
+  padding: 40px 20px 100px 20px;
+
+  .helpBox-content {
+    margin: 10px;
+  }
+  .helpBox-title {
+    @include subheadline-1;
+  }
+
+  .insurance-phone {
+    border-bottom: 1px solid $brand-lightgrey;
+    padding-bottom: 26px;
+    margin-right: 16px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  p {
+    margin-top: 30px;
+    @include body-1;
+  }
+}

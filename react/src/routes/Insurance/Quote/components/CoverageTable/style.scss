@@ -1,0 +1,48 @@
+@import "../../../../../styles/_variables";
+@import "../../../../../styles/_typography";
+
+.coverageTable {
+  table {
+    > tbody > tr {
+      > th,
+      > td {
+        &,
+        > label {
+          @include body-1;
+
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      td > div {
+        display: flex;
+        align-items: center;
+
+        > .icon {
+          font-size: 12px;
+          margin-left: 6px;
+          margin-right: 8px;
+          width: 20px;
+          text-align: center;
+
+          &-checkmark {
+            color: $brand-green;
+          }
+
+          &-x {
+            color: $brand-red;
+          }
+        }
+      }
+    }
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    .custom-dropdown {
+      min-width: 160px;
+    }
+  }
+}

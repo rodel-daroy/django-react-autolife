@@ -1,0 +1,116 @@
+@import "../../../styles/_variables";
+
+.insurance-intro-page {
+  .insurance-title {
+    text-align: center;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .insurance-title {
+      text-align: left;
+    }
+  }
+}
+
+.insurance-content {
+  .what-you-need {
+    text-align: left;
+    font-size: 21px;
+    font-weight: 300;
+    max-width: 435px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    left: 20px;
+
+    ol {
+      display: flex;
+      flex-direction: column;
+      counter-reset: need;
+      padding-left: 0;
+      line-height: $line-height-base;
+
+      > li {
+        display: block;
+        counter-increment: need;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        > div {
+          position: relative;
+          padding-left: 45px;
+          display: flex;
+          align-items: center;
+          font-weight: 400;
+        }
+
+        .what-number {
+          position: absolute;
+          left: 0;
+          display: block;
+          border: 1px solid $brand-lightgrey;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+
+          &:after {
+            content: counter(need);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+
+        ul {
+          list-style-type: none;
+          padding-left: 40px;
+          margin-left: 45px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+
+          > li {
+            position: relative;
+            margin-bottom: 4px;
+
+            &:before {
+              content: "•";
+              position: absolute;
+              left: -25px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .insurance-business-use {
+    margin-top: 50px;
+    padding-right: 0;
+  }
+
+  .quote-button {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .what-you-need {
+      position: static;
+      margin-left: 0;
+    }
+  }
+}
+
+.insurance-intro-page {
+  .text-width {
+    border-bottom: 2px solid #c2bfcc;
+  }
+}

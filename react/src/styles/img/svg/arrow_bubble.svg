@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow/Arrow Bubble Copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="News-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-690.000000, -1065.000000)">
+        <g id="All-Articles" transform="translate(120.000000, 715.000000)">
+            <g id="Articles">
+                <g id="recentley-added">
+                    <g id="Group-4" transform="translate(316.000000, 59.000000)">
+                        <g id="Car#1-Copy-4" transform="translate(0.000000, 209.000000)">
+                            <g id="Arrow/Arrow-Right-Small-Red" transform="translate(254.000000, 82.000000)">
+                                <g id="Arrow" stroke-width="1" stroke="#ED222C">
+                                    <circle id="Oval" stroke-width="0.7" cx="10" cy="10" r="9.65"></circle>
+                                </g>
+                                <path d="M9.49910104,12.9123077 L11.8343654,10.433238 C12.0552115,10.1990919 12.0552115,9.81924175 11.8343654,9.58509573 L9.48215633,7.08773805 C9.3728629,6.97201415 9.19635544,6.97051514 9.08564996,7.08474002 C8.97268518,7.20136333 8.97127312,7.39353695 9.08254343,7.51195907 L11.2353697,9.79705634 C11.3457927,9.91427925 11.3457927,10.1040544 11.2353697,10.2212774 L9.09977055,12.4883864 C8.98934749,12.6053096 8.98934749,12.7950848 9.09977055,12.9123077 C9.21019362,13.0292308 9.38896038,13.0292308 9.49910104,12.9123077 Z" id="Arrow" fill="#ED222C"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

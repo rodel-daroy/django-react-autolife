@@ -1,0 +1,99 @@
+@import 'styles/_variables';
+
+.articles-checklist {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    min-height: 42px;
+    display: flex;
+    align-items: stretch;
+
+    .custom-checkbox {
+      margin: 0 !important;
+      flex-basis: 100%;
+      flex-grow: 0;
+      flex-shrink: 1;
+      overflow: hidden;
+
+      input[type=checkbox] {
+        @include focus-outline($selectorSuffix: '+ label', $offset: -2px);
+      }
+
+      .checkbox-label {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      input[type=checkbox] + label {
+        padding: 0 12px;
+        height: 100%;
+      }
+    }
+
+    &-inner {
+      display: flex;
+      align-items: stretch;
+      border-radius: 0;
+      text-align: left;
+    }
+
+    &, &:focus {
+      color: $brand-black;
+    }
+
+    background-color: $brand-white;
+
+    &:nth-child(odd) {
+      background-color: lighten($brand-lightgrey, 10%);
+    }
+
+    &:hover {
+      background-color: $brand-red;
+
+      .custom-checkbox .checkbox-label {
+        color: $brand-white !important;
+      }
+
+      .articles-checklist-item-sub {
+        color: $brand-lightgrey;
+      }
+    }
+
+    &-title {
+      flex-basis: 25%;
+      flex-grow: 1;
+      flex-shrink: 1;
+      overflow: hidden;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: 1.4rem;
+      line-height: normal;
+      padding-right: 12px;
+    }
+
+    &-heading, &-sub {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-heading {
+      font-weight: $font-weight-medium;
+    }
+
+    &-sub {
+      color: $brand-darkgrey;
+      font-size: .8em;
+    }
+
+    &-date {
+      flex-shrink: 0;
+
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import 'styles/_colors';
+@import 'styles/_variables';
+@import 'styles/_typography';
+
+.auto-show-win {
+  &-iframe-band {
+    background-color: lighten($brand-lightgrey, 10%);
+    color: $brand-red;
+    text-align: center;
+
+    .text-container {
+      display: flex;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &-tabs { 
+    padding-bottom: 0;
+  }
+
+  .legal-area {
+    @include legal-copy;
+
+    color: $brand-darkgrey;
+  }
+
+  &-rules {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    &-iframe-band {
+      .text-container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .legal-area {
+      color: darken($brand-darkgrey, 10%);
+    }
+
+    &-tabs {
+      .tab-set-tab > label {
+        font-size: 12px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
+}

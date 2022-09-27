@@ -1,0 +1,107 @@
+{% extends 'admin/base_site.html' %}
+{% block title %}
+    Autolife | All Assets
+{% endblock %}
+
+{% block content %}
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <div class="container">
+        <a class="btn btn-default" href="{% url 'all_assets' %}">See All Assets</a><br/>
+        <h3>{{ asset.name | title }} &nbsp </h3>
+        <h3>Content Attribution :{% if asset.content_attribution %}
+            {{ asset.content_attribution }} {% else %} - {% endif %}</h3>
+        {% if asset.asset_type.name == "video" %}
+            <a href="{% url 'generate_thumbnail'  asset.id %}" type="button" class="btn btn-default" >Generate Thumbnail</a>
+        {% endif %}
+
+        {% if asset.asset_type %}
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>{{ asset.name | title }} </td>
+                </tr>
+                </thead>
+                Thumbnail :
+                <div class="col-sm-4" id="{{ image.id }}">
+                    {% if asset.thumbnail %}
+                        <img src="{{ asset.thumbnail.url}}" class="img-responsive" width="300"><br/>
+                    {% else %}
+                        <code>No Thumbnail found</code>
+                    {% endif %}
+                </div>
+                <hr class="divider"/>
+                <tbody>
+                <tr>
+                    <div class="row" id="assets">
+
+                        {% if asset.asset_type.name == "carousel" %}
+                            {% for image in asset.assets.all %}
+                                <div class="col-sm-4" id="{{ image.id }}">
+                                    <img src="{{ image.content.url }}" class="img-responsive" width="300"><br/>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        {% if asset.asset_type.name == "image" %}
+                            {% for image in asset.assets.all %}
+                                <div class="col-sm-4">
+                                    <img src="{{ image.content.url }}" class="img-responsive" width="300"><br/>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        {% if asset.asset_type.name == "img" %}
+                            {% for image in asset.assets.all %}
+                                <div class="col-sm-4" id="{{ image.id }}">
+                                    <img src="http://167.114.49.129/media/uploads/A9AE78B0784CF68F974077B671BA3431106041F0972478B896pimgpsh_mobile_save_distr.jpg" class="img-responsive" width="300"><br/>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        {% if asset.asset_type.name == "video" %}
+                            {% for video in asset.assets.all %}
+                                <div class="col-sm-4">
+                                    <video width="1024" height="720" controls>
+                                        <source src="{{ video.content }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </tr>
+
+
+                </tbody>
+            </table>
+            <h2>{{ asset.asset_type.name }}</h2>
+            <button type="button" class="btn btn-info" id="update_order">Update asset order</button>
+
+        {% else %}
+            <h3 class="text-center">Asset Not Found</h3>
+        {% endif %}
+        <script>
+            $("#assets").sortable();
+            $("#update_order").click(function (evt) {
+                var childs =  $("#assets").children();
+                var results = [];
+                for(i=0; i<childs.length; i++){
+                    div_id = $(childs[i]).attr("id");
+                    results.push(div_id);
+                }
+                console.log(results);
+                asset_id = {{ asset.id }};
+                var url = '{% url 'update_order'  asset.id %}';
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    data: JSON.stringify({'order': results}),
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (response) {
+                        alert(response.message);
+                    }
+                })
+
+            })
+        </script>
+    </div>
+{% endblock %}

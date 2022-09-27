@@ -1,0 +1,220 @@
+@import 'styles/_variables';
+
+html {
+	font-size: 10px;
+
+	@media (max-width: $screen-md-max) {
+		font-size: 9px;
+	}
+
+	/* @media (max-width: $screen-sm-max) {
+		font-size: 8px;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		font-size: 6.5px;
+	} */
+}
+
+b, strong {
+	font-weight: $font-weight-medium;
+}
+
+@mixin line-height($height, $multiplier: .5) {
+	line-height: $height;
+	margin: {
+		top: ($height * $multiplier) * (1 / 3);
+		bottom: ($height * $multiplier) * (2 / 3);
+		left: 0;
+		right: 0;
+	}
+}
+
+@mixin headline-medium {
+	text-transform: uppercase;
+	font-weight: $font-weight-medium;
+	font-size: 3.4rem;
+	letter-spacing: .085rem;
+
+	@include line-height(4rem);
+}
+
+/* @mixin headline-bold {
+	text-transform: uppercase;
+	font-weight: $font-weight-bold;
+	font-size: 3.4rem;
+	letter-spacing: .085rem;
+	
+	@include line-height(4rem);
+} */
+
+@mixin subheadline-1 {
+	text-transform: none;
+	font-weight: $font-weight-normal;
+	font-size: 1.8rem;
+	letter-spacing: .069rem;
+
+	@include line-height(2.6rem);
+
+	margin-bottom: 2.2rem;
+}
+
+@mixin editorial-subheadline {
+	@include subheadline-1;
+	@include line-height(3.2rem, $multiplier: 1);
+}
+
+@mixin editorial-headline {
+	@include headline-medium;
+
+	text-transform: none;
+}
+
+@mixin editorial-title {
+	@include editorial-subheadline;
+
+	margin-top: 74px;
+	text-transform: uppercase;
+}
+
+@mixin title-1 {
+	text-transform: uppercase;
+	font-weight: $font-weight-medium;
+	font-size: 2.2rem;
+	letter-spacing: .041rem;
+
+	@include line-height(2.8rem);
+}
+
+@mixin body-1 {
+	text-transform: none;
+	font-weight: $font-weight-light;
+	font-size: 1.8rem;
+	
+	@include line-height(3.2rem, $multiplier: 1);
+}
+
+@mixin tile-title {
+	text-transform: uppercase;
+	font-weight: $font-weight-normal;
+	font-size: 22px;
+	letter-spacing: .41px;
+
+	@include line-height(30px);
+}
+
+@mixin tile-body {
+	text-transform: none;
+	font-weight: $font-weight-light;
+	font-size: 16px;
+	letter-spacing: .03em;
+
+	@include line-height(22px);
+}
+
+@mixin editorial-tile-title {
+	text-transform: none;
+	font-weight: $font-weight-medium;
+	font-size: 2rem;
+	letter-spacing: .041rem;
+
+	@include line-height(2.7rem);
+}
+
+@mixin editorial-tile-body {
+	text-transform: none;
+	font-weight: $font-weight-light;
+	font-size: 16px;
+	letter-spacing: .03em;
+
+	@include line-height(22px);
+}
+
+@mixin legal-copy {
+	text-transform: none;
+	font-weight: $font-weight-light;
+	font-size: 1.4rem;
+	letter-spacing: .026rem;
+
+	@include line-height(3.2rem, $multiplier: 1);
+}
+
+@mixin primary-link {
+	text-decoration: none;
+
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	text-transform: inherit;
+}
+
+@mixin primary-link-light {
+	@include primary-link;
+
+	color: $brand-red;
+
+	&:hover, &.hover {
+		color: $brand-red !important;
+		transition: none !important;
+		text-decoration: underline;
+	}
+}
+
+@mixin primary-link-dark {
+	@include primary-link;
+
+	color: $brand-white;
+
+	&:hover, &.hover {
+		color: lighten($brand-red, 15%) !important;
+		transition: none !important;
+		text-decoration: underline;
+	}
+}
+
+@mixin field-label {
+	text-transform: none;
+	font-weight: $font-weight-normal;
+	font-size: 1.6rem;
+	letter-spacing: .03em;
+
+	@include line-height(2.6rem);
+
+	margin-bottom: .6rem;
+}
+
+@mixin aside-title {
+	text-transform: uppercase;
+	font-weight: $font-weight-normal;
+	font-size: 13px;
+	letter-spacing: .03em;
+
+	@include line-height(1.3em);
+}
+
+@mixin footer-title {
+	text-transform: uppercase;
+	font-weight: $font-weight-normal;
+	font-size: 1.6rem;
+	letter-spacing: .069rem;
+
+	@include line-height(2.4rem);
+}
+
+@mixin footer-body {
+	text-transform: none;
+	font-weight: $font-weight-light;
+	font-size: 14px;
+	letter-spacing: .03em;
+
+	@include line-height(22px);
+}
+
+@mixin section-header {
+	text-transform: none;
+	font-weight: $font-weight-light;
+	font-size: 16px;
+	letter-spacing: .03em;
+
+	@include line-height(22px);
+}

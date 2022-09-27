@@ -1,0 +1,37 @@
+.feature-spot-carousel {
+	position: relative;
+
+	&-inner.changing {
+		.feature-spot-carousel-item {
+			visibility: visible !important;
+		}
+	}
+
+	&-item {
+		width: 100%;
+		visibility: hidden;
+
+		&.is-selected {
+			visibility: visible;
+		}
+	}
+
+	&-frame {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		animation-delay: 4s;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		&-frame {
+			.page-stepper {
+				.stepper-button {
+					display: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Phone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="AL-Insurance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AL-Insurance-Form-02" transform="translate(-1052.000000, -298.000000)">
+            <g id="Need-Help" transform="translate(995.000000, 191.000000)">
+                <g id="Phone" transform="translate(56.000000, 106.000000)">
+                    <g id="Icon/Phone">
+                        <g id="Phone">
+                            <g id="char_S-Copy" stroke="#ED222C" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M38.1818182,20 C38.1818182,9.95818182 30.0418182,1.81818182 20,1.81818182 C9.95818182,1.81818182 1.81818182,9.95818182 1.81818182,20 C1.81818182,30.0409091 9.95818182,38.1818182 20,38.1818182 C30.0418182,38.1818182 38.1818182,30.0409091 38.1818182,20 L38.1818182,20 Z" id="Path"></path>
+                            </g>
+                            <g id="telephone" transform="translate(9.090909, 9.090909)">
+                                <path d="M16.8138745,14.0934591 L14.7684274,16.1383303 C13.9621533,16.9451318 11.1845661,16.0598687 8.92537519,13.8007162 C6.66726657,11.5421048 5.78252955,8.76510586 6.58934478,7.95884544 L8.63370959,5.91397424 C9.11801517,5.42913576 9.11801517,4.64506104 8.63370959,4.16076368 L4.83610444,0.363223021 C4.35179885,-0.12107434 3.56771081,-0.12107434 3.0828641,0.363223021 L0.891854804,2.55419511 C-1.44688123,4.89343253 0.972482215,11.1059666 6.29713805,16.430532 C11.6212528,21.7545563 17.8338924,24.1749609 20.1731695,21.8346413 L22.3636377,19.6436692 C22.8484844,19.1593718 22.8484844,18.3752971 22.3636377,17.8915408 L18.5665737,14.0934591 C18.0822681,13.6091617 17.29818,13.6091617 16.8138745,14.0934591 Z" id="Path" stroke="#ED222C" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <polygon id="Path" fill="#ED222C" fill-rule="nonzero" points="7.40355341 6.82456332 2.18411461 1.50830001 1.50830001 2.22241079 6.72773881 7.53867409"></polygon>
+                                <polygon id="Path" fill="#ED222C" fill-rule="nonzero" points="21.5141047 20.0056047 16.1303601 14.5454545 15.4545455 15.2595653 20.8382901 20.7197155"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

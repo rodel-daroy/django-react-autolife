@@ -1,0 +1,11 @@
+@import 'styles/_variables';
+
+.article-related-articles-section {
+  padding: 32px 24px;
+  background-color: $brand-white;
+
+  &-sidebar, 
+  &-bottom {
+    margin: 32px 0;
+  }
+}

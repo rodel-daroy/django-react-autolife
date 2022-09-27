@@ -1,0 +1,33 @@
+@import "styles/_colors";
+
+.insurance-phone {
+	background-image: url("./img/Phone.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	padding: {
+		top: 5px;
+		left: 50px;
+	}
+	margin-top: 10px;
+	text-align: left;
+	
+	a {
+		line-height: 32px;
+		font-size: 26px;
+		color: $brand-red;
+		line-height: 25px;
+
+		> span {
+			display: block;
+			font-size: .6em;
+		}
+	}
+
+	&.dark {
+		background-image: url("./img/Phone-dark.svg");
+
+		a {
+			color: $brand-white;
+		}
+	}
+}

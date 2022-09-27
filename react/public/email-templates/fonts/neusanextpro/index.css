@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'neusanextpro';
+    src: url('neusanextpro_regular_macroman/neusanextpro-regular-webfont.woff2') format('woff2'),
+         url('neusanextpro_regular_macroman/neusanextpro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neusanextpro';
+    src: url('neusanextpro_medium_macroman/neusanextpro-medium-webfont.woff2') format('woff2'),
+         url('neusanextpro_medium_macroman/neusanextpro-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'neusanextpro';
+    src: url('neusanextpro_light_macroman/neusanextpro-light-webfont.woff2') format('woff2'),
+         url('neusanextpro_light_macroman/neusanextpro-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}

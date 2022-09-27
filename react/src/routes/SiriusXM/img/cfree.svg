@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/CFree</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SiriusXM" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(-693.000000, -1222.000000)" id="Welcome" stroke="#F0802E">
+            <g transform="translate(0.000000, 767.000000)">
+                <g id="Icons/CFree" transform="translate(691.000000, 453.000000)">
+                    <g id="file_alarm" stroke-width="1" fill-rule="evenodd">
+                        <path d="M29.92,20.96875 L30.36,28.2791667 C30.36,29.7467882 31.5414,30.9375 33,30.9375 L11,30.9375 C12.4586,30.9375 13.64,29.7467882 13.64,28.2791667 L14.08,20.96875 C14.5211,14.7637569 17.8684,11 22,11 C26.1294,11 29.4789,14.7637569 29.92,20.96875 L29.92,20.96875 Z" id="Path" stroke-width="1.5"></path>
+                        <polygon id="Path" stroke-width="1.5" points="21.3125 8.9375 22.40975 8.9375 22.40975 11 21.3125 11"></polygon>
+                        <path d="M23.9178054,33.9657578 C23.3617418,34.5075353 22.6023742,34.8449099 21.7638829,34.8449099 C20.9253916,34.8449099 20.166024,34.5075353 19.6099604,33.9635599" id="Path" stroke-width="1.5"></path>
+                    </g>
+                    <path d="M35.0625,35.0625 L8.9375,8.9375 L35.0625,35.0625 Z" id="Path" stroke-width="1.5"></path>
+                    <path d="M3.4375,22 C3.4375,32.2513125 11.7486875,40.5625 22,40.5625 C32.2513125,40.5625 40.5625,32.2513125 40.5625,22 C40.5625,11.7486875 32.2513125,3.4375 22,3.4375 C11.7486875,3.4375 3.4375,11.7486875 3.4375,22 L3.4375,22 Z" id="Path" stroke-width="1.5"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

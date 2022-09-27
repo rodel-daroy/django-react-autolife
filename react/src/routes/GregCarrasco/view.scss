@@ -1,0 +1,59 @@
+@import 'styles/_variables';
+
+.greg-view {
+  $avatar-size: 125px;
+  $avatar-radius: $avatar-size / 2;
+  $avatar-padding-v: 48px;
+  $avatar-padding-h: 16px;
+
+  &-avatar {
+    padding: $avatar-padding-v $avatar-padding-h;
+    float: right;
+    shape-outside: circle($avatar-radius at ($avatar-radius + $avatar-padding-h) ($avatar-radius + $avatar-padding-v));
+    shape-margin: $avatar-padding-h;
+
+    > img {
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 50%;
+    }
+  }
+
+  &-container {
+    @include clearfix;
+  }
+
+  &-band {
+    background-color: /* #F6F9FC */ #eef2f6;
+  }
+
+  &-band-title {
+    font-weight: $font-weight-normal;
+    margin-bottom: 32px;
+  }
+
+  &-site {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .featured-layout {
+    .content-container:last-child {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1350px) {
+    .featured-layout {
+      .content-container:last-child {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    &-avatar {
+      display: none;
+    }
+  }
+}

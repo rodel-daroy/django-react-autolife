@@ -1,0 +1,34 @@
+.slider_wrapper {
+  flex-grow: 1;
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 0 13%;
+  padding-bottom: 100px;
+}
+
+.trade-in-side {
+  position: absolute;
+  left: -12%;
+  width: 10%;
+  top: 300px;
+  transform: translateY(-50%);
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60vh;
+  min-height: 433px;
+}
+.step_fill_bg_clr {
+  background-color: #de0d0d !important;
+}
+.step_empty_bg_clr {
+  background-color: hsla(0, 4%, 23%, 0.3) !important;
+}
+.step_width {
+  height: 70% !important;
+}
+
+.step_start_clr {
+  border: 1px solid #de0d0d !important;
+}

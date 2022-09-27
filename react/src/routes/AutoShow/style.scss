@@ -1,0 +1,117 @@
+@import 'styles/_variables';
+@import 'styles/_typography';
+
+.auto-show {
+    &-thumbnails {
+        display: flex;
+        justify-content: center;
+        margin: 0 -16px;
+        margin-top: 65px;
+
+        > .article-thumb {
+            margin: 0 16px;
+            margin-bottom: 32px;
+            flex-basis: 33%;
+        }
+    }
+
+    &-contests {
+        > .article-thumb {
+            flex-basis: 50%;
+
+            /* .article-thumbnail .img-wrap {
+                height: 21vw !important;
+                min-height: 195px !important;
+            } */
+        }
+    }
+
+    &-cards {
+        display: flex;
+        margin: {
+            top: 16px;
+            bottom: 45px;
+            left: -16px;
+            right: -16px;
+        }
+
+        > .card {
+            flex-basis: 50%;
+            margin-left: 16px;
+            margin-right: 16px;
+
+            p {
+                margin: 18px 0;
+            }
+        }
+    }
+
+    &-card-bentley {
+        .card-content {
+            background: {
+                image: url(./img/pawprint.svg);
+                repeat: no-repeat;
+                position: 80% 80%;
+                size: 25%;
+            }
+        }
+    }
+
+    &-toc {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        font-size: 1.8rem;
+        font-weight: $font-weight-light;
+
+        .toc-value:before {
+            border-bottom-width: .1em;
+        }
+    }
+
+    &-boxout {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 940px;
+        width: 100%;
+
+        h3 {
+            margin-top: 0;
+        }
+
+        &-footnote {
+            @include legal-copy;
+            margin-bottom: 0;
+        }
+    }
+
+    hr {
+        max-width: ($container-lg - 64px * 2);
+        margin: 0 auto;
+        margin-bottom: 32px;
+    }
+
+    &-buy-now {
+        margin-top: 42px !important;
+    }
+
+    &-buy {
+        text-align: center;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        &-thumbnails {
+            flex-direction: column;
+        }
+
+        &-cards {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        &-buy {
+            text-align: left;
+        }
+    }
+}

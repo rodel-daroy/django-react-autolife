@@ -1,0 +1,20 @@
+@import 'styles/_variables';
+@import 'styles/_typography';
+
+.sirius-vin-box {
+    &-title {
+        font-size: 2.1rem;
+        margin-top: 0;
+
+        &:after {
+            content: url(../img/car-speaker.png);
+            margin-left: 8px;
+        }
+    }
+
+    &-not-sure {
+        @include legal-copy;
+
+        line-height: inherit;
+    }
+}

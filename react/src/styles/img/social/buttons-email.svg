@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>buttons/social/email</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="buttons/social/email">
+            <rect id="Rectangle-3" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="36" height="36"></rect>
+            <g id="Facebook" transform="translate(3.000000, 3.000000)" fill="#ED222C">
+                <g id="Group-3">
+                    <path d="M30,15 C30,23.283774 23.2845416,30 14.9995055,30 C6.71545841,30 0,23.283774 0,15 C0,6.71622602 6.71545841,0 14.9995055,0 C23.2845416,0 30,6.71622602 30,15" id="Fill-1"></path>
+                </g>
+            </g>
+            <g id="Icon/NewsletterWhite" transform="translate(11.000000, 13.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Page-1" transform="translate(0.538462, 0.526316)">
+                    <path d="M12.2815538,0.263157895 L0.731015385,0.263157895 C0.393938462,0.263157895 0.269015385,0.394736842 0.269015385,0.714736842 L0.269015385,8.39157895 C0.269015385,8.73052632 0.375092308,8.84315789 0.731015385,8.84315789 L12.2815538,8.84315789 C12.6283231,8.84315789 12.7435538,8.73052632 12.7435538,8.39157895 L12.7435538,0.714736842 C12.7435538,0.394736842 12.6186308,0.263157895 12.2815538,0.263157895 Z" id="Stroke-1" stroke-width="1.2"></path>
+                    <path d="M0.491453846,0.443105263 L6.00314615,5.83047368 C6.27345385,6.09521053 6.7123,6.09521053 6.98260769,5.83047368 L12.5072231,0.431" id="Stroke-3" stroke-width="1.2"></path>
+                    <path d="M0.500230769,8.61763158 L3.96523077,5.23078947" id="Stroke-5" stroke-width="1.2"></path>
+                    <path d="M9.0475,5.23068421 L12.5125,8.61752632" id="Stroke-7" stroke-width="1.2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Music</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SiriusXM" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(-819.000000, -1226.000000)" id="Welcome" stroke="#9ED4E6">
+            <g transform="translate(0.000000, 767.000000)">
+                <g id="Icons/Music" transform="translate(816.000000, 456.000000)">
+                    <g id="music_note">
+                        <path d="M12.9375,14.0625 L32.0625,10.6875 L12.9375,14.0625 Z" id="Path" stroke-width="1.5"></path>
+                        <path d="M32.0625,21.375 C32.0625,22.3070625 31.3070625,23.0625 30.375,23.0625 L27.5625,23.0625 C25.077375,23.0625 23.0625,24.262875 23.0625,26.4375 C23.0625,28.612125 25.077375,29.8125 27.5625,29.8125 C30.047625,29.8125 32.0625,28.612125 32.0625,26.4375 L32.0625,3.9375 L12.9375,7.3125 L12.9375,29.8125 C12.9375,31.987125 10.922625,33.1875 8.4375,33.1875 C5.952375,33.1875 3.9375,31.987125 3.9375,29.8125 C3.9375,27.637875 5.952375,26.4375 8.4375,26.4375 L11.25,26.4375 C12.1820625,26.4375 12.9375,25.6820625 12.9375,24.75" id="Path" stroke-width="1.5"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,142 @@
+[
+  {
+    "Category": "Concept",
+    "Slug": "lexus-lf-1-limitless-concept",
+    "Vehicle Name 1": "Lexus lF-1 Limitless Concept",
+    "YEAR": "NA",
+    "Vehicle Name 2": "NA",
+    "JATO ID": "NA",
+    "NEW JATO": "All information should return NA",
+    "COMMENTS": "Want to add this to Concept cars and maybe delete 2"
+  },
+  {
+    "Category": "Concept",
+    "Slug": "toyota-fine-comfort-ride-concept",
+    "Vehicle Name 1": "Toyota Fine-Comfort Ride Concept",
+    "YEAR": "NA",
+    "Vehicle Name 2": "NA",
+    "JATO ID": "NA",
+    "NEW JATO": "All information should return NA",
+    "COMMENTS": "Want to add this to Concept cars and maybe delete 2"
+  },
+  {
+    "Category": "Family",
+    "Slug": "2019-ford-expedition-xlt-suv-crossover",
+    "Vehicle Name 1": "FORD EXPEDITION",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Ford Expedition XLT SUV / Crossover",
+    "JATO ID": 52407620190103,
+    "NEW JATO": 52407620190301,
+    "COMMENTS": ""
+  },
+  {
+    "Category": "Luxury",
+    "Slug": "2019-alfa-romeo-giulia-sedan",
+    "Vehicle Name 1": "ALFA ROMEO GULIA",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Alfa Romeo Giulia - Sedan",
+    "JATO ID": 777839220190116,
+    "NEW JATO": 777839220190311,
+    "COMMENTS": "NO IMAGE FOR JELLY BEAN - USE DEFAULT SEDAN"
+  },
+  {
+    "Category": "Luxury",
+    "Slug": "2019-alfa-romeo-stelvio-awd-suv-crossover",
+    "Vehicle Name 1": "ALFA ROMEO STELVIO",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Alfa Romeo Stelvio AWD SUV / Crossover",
+    "JATO ID": 784213120190227,
+    "NEW JATO": 784213120190307,
+    "COMMENTS": ""
+  },
+  {
+    "Category": "SUV",
+    "Slug": "2019-fiat-500x-pop-4wd-suv-crossover",
+    "Vehicle Name 1": "FIAT 500X",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Fiat 500X Pop 4WD SUV / Crossover",
+    "JATO ID": 800048920190228,
+    "NEW JATO": 800048920190307,
+    "COMMENTS": ""
+  },
+  {
+    "Category": "SUV",
+    "Slug": "2019-ford-ecosport-s-suv-crossover",
+    "Vehicle Name 1": "FORD ECOSPORT",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Ford Ecosport S SUV / Crossover",
+    "JATO ID": 789205620190103,
+    "NEW JATO": 789205620190301,
+    "COMMENTS": "NO IMAGE FOR JELLY BEAN - USE DEFAULT SUV"
+  },
+  {
+    "Category": "SUV",
+    "Slug": "2019-ford-edge-se-awd-suv-crossover",
+    "Vehicle Name 1": "FORD EDGE",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Ford Edge SE AWD SUV / Crossover",
+    "JATO ID": 744803420190103,
+    "NEW JATO": 744803420190301,
+    "COMMENTS": ""
+  },
+  {
+    "Category": "SUV",
+    "Slug": "2019-ford-escape-s-fwd-suv-crossover",
+    "Vehicle Name 1": "FORD ESCAPE",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Ford Escape S FWD SUV / Crossover",
+    "JATO ID": 708261820190211,
+    "NEW JATO": 708261820190301,
+    "COMMENTS": ""
+  },
+  {
+    "Category": "SUV",
+    "Slug": "2019-lincoln-mkc-select-awd-suv-crossover",
+    "Vehicle Name 1": "LINCOLN MKC",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Lincoln MKC Select AWD SUV / Crossover",
+    "JATO ID": 727151220190103,
+    "NEW JATO": 727151220190301,
+    "COMMENTS": ""
+  },
+  {
+    "Category": "SUV",
+    "Slug": "2019-lincoln-nautilus-select-awd-suv-crossover",
+    "Vehicle Name 1": "LINCOLN NAUTILUS",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Lincoln Nautilus Select AWD SUV / Crossover",
+    "JATO ID": 735894620190103,
+    "NEW JATO": 735894620190301,
+    "COMMENTS": ""
+  },
+  {
+    "Category": "SUV",
+    "Slug": "2019-lincoln-navigator-select-suv-crossover",
+    "Vehicle Name 1": "LINCOLN NAVIGATOR",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Lincoln Navigator Select SUV / Crossover",
+    "JATO ID": 60061020180917,
+    "NEW JATO": 60061020190301,
+    "COMMENTS": ""
+  },
+  {
+    "Category": "Truck",
+    "Slug": "2019-ford-ranger-xl-4x4-supercab-pickup",
+    "Vehicle Name 1": "FORD RANGER",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Ford Ranger XL 4x4 SuperCab Pickup",
+    "JATO ID": 802354120180904,
+    "NEW JATO": 802354020190301,
+    "COMMENTS": ""
+  },
+  {
+    "Category": "Truck",
+    "Slug": "2019-ram-promaster-cargo-van-1500-118-wb-low-roof",
+    "Vehicle Name 1": "RAM PROMASTER",
+    "YEAR": 2019,
+    "Vehicle Name 2": "2019 Ram ProMaster Cargo Van 1500 118 WB Low Roof",
+    "JATO ID": 726830020190204,
+    "NEW JATO": 726830020190307,
+    "COMMENTS": "NO IMAGE FOR JELLY BEAN - USE DEFAULT SUV"
+  }
+]

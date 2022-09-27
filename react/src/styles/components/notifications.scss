@@ -1,0 +1,36 @@
+.react-toast-container {
+	position: absolute !important;
+
+	.react-toast {
+		font-family: $font-family-base;
+		font-weight: $font-weight-light;
+		min-height: 30px !important;
+		border-radius: $border-radius-base;
+
+		&.success {
+			background-color: $brand-blue;
+		}
+
+		&.error {
+			background-color: $brand-red;
+		}
+
+		.btn-link.dark {
+			padding-right: 4px;
+
+			&:hover, &:active {
+				color: $brand-white;
+			}
+		}
+
+		[role=alert] {
+			margin-left: 4px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.react-toast {
+			border-radius: 0;
+		}
+	}
+}

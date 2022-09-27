@@ -1,0 +1,75 @@
+.error-summary {
+	background-color: rgba($brand-lightgrey, .2);
+	padding: 20px;
+	margin-bottom: 30px;
+
+	@keyframes fade-in-error-summary {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	animation: {
+		name: fade-in-error-summary;
+		delay: .5s;
+		duration: 1s;
+		fill-mode: backwards;
+	}
+
+	&-title {
+		@include aside-title;
+	}
+
+	ul.error-summary-inner {
+		list-style-type: none;
+	    margin: 0;
+	    margin-top: 10px;
+	    padding: 0;
+
+	    > li {
+	    	display: flex;
+    		align-items: baseline;
+    		flex-wrap: wrap;
+
+			@include tile-body;
+
+			margin-top: 0;
+			margin-bottom: 0;
+
+    		.error-summary-label {
+    			display: flex;
+    			align-items: baseline;
+    		}
+
+    		.error-summary-icon {
+    			width: 1.5em;
+    			text-align: center;
+    		}
+
+    		.icon {
+    			color: $brand-red;
+    		}
+
+    		&.no-errors {
+    			text-decoration: line-through;
+
+    			.icon {
+    				color: $brand-green;
+    			}
+    		}
+	    }
+	}
+
+	ul.error-summary-field {
+		display: inline-flex;
+		list-style-type: none;
+		padding-left: 0;
+
+		> li {
+
+		}
+	}
+}

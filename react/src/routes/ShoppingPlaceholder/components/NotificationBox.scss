@@ -1,0 +1,29 @@
+@import 'styles/_variables';
+
+.notification-box {
+	max-width: 400px;
+	margin: {
+		left: auto;
+		right: auto;
+		top: 24vh;
+	}
+
+	form {
+		margin-top: 24px;
+	}
+
+	&-address {
+		margin-top: 24px;
+		margin-bottom: -12px;
+		font-size: 12px;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		margin-top: 12vh;
+		
+		.card-content {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+	}
+}

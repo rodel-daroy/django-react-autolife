@@ -1,0 +1,17 @@
+@import 'styles/_variables';
+
+.icon-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $font-weight-light !important;
+    margin-bottom: 45px;
+
+    &-icon {
+        margin-right: 16px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        justify-content: flex-start;
+    }
+}

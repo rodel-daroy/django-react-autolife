@@ -1,0 +1,16 @@
+{% extends 'admin/change_list.html' %}
+{% load static %}
+
+{% block content %}
+    {% if "ui_controllers" in request.path %}
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="{% static 'admin/js/jquery.init.js' %}"></script>
+    <span><a href="{% url 'ui_controls:tiles_list' %}" class="btn btn-info">
+        <i class="icon-list icon-white"></i>&nbsp;
+        Ordering Of Tiles
+    </a>
+    </span>
+    {% endif %}
+    {{ block.super }}
+{% endblock %}

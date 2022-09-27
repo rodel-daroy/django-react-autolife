@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="9px" viewBox="0 0 22 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Arrow Down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="button/light/small/toggle" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-56.000000, -12.000000)">
+        <g id="Icon/Arrow-Dark" transform="translate(66.500000, 16.500000) rotate(-90.000000) translate(-66.500000, -16.500000) translate(62.000000, 6.000000)" stroke="#232C3A">
+            <g id="Arrow-Down" transform="translate(4.500000, 10.500000) rotate(-180.000000) translate(-4.500000, -10.500000) ">
+                <polyline id="Path-2-Copy" points="0 3.50616302 4.55251796 0 9 3.50616302"></polyline>
+                <path d="M4.5,0 L4.5,20.3601229" id="Path-3-Copy"></path>
+            </g>
+        </g>
+    </g>
+</svg>

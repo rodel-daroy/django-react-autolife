@@ -1,0 +1,35 @@
+{% extends "admin/change_form.html" %}
+
+{% load static %}
+{% load i18n admin_urls %}
+
+{% block extrahead %}{{ block.super }}
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'admin/js/jquery.init.js' %}"></script>
+{% endblock %}
+{% block object-tools-items %}
+    <li>
+        <a href="{% url opts|admin_urlname:'history' original.pk|admin_urlquote %}" class="historylink">{% trans "History" %}</a>
+    </li>
+
+    {% if has_absolute_url %}
+        <li>
+            <a href="{% url 'admin:view_on_site' content_type_id original.pk %}" class="viewsitelink">{% trans "View on site" %}</a>
+        </li>
+    {% endif %}
+
+{% endblock %}
+{#{% block content %}#}
+{#    {{ block.super }}#}
+{#    <h3 id="test"> Hello</h3>#}
+{#    <button id="test-b">Click me</button>#}
+
+{#    <script>#}
+{#    $("#test-b").click(function (evt) {#}
+{#        $("#test").html("yes Changed and worked");#}
+{#    })#}
+{#    </script>#}
+{#{% endblock %}#}

@@ -1,0 +1,24 @@
+@import '../../../../styles/_variables';
+
+.insurance-logos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 900px;
+	margin: 40px auto;
+	flex-wrap: wrap;
+
+	.insurance-logo {
+		flex-basis: 25%;
+		height: 150px;
+		margin: 0 28px;
+		position: relative;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		.insurance-logo {
+			flex-basis: 50%;
+			height: 125px;
+		}
+	}
+}

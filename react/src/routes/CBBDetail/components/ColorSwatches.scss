@@ -1,0 +1,35 @@
+@import 'styles/_variables';
+
+$swatch-size: 26px;
+
+.color-swatches {
+	display: flex;
+	flex-wrap: wrap;
+
+	&-swatch {
+		appearance: none;
+		margin: 0;
+		padding: 0;
+		border: 2px solid $brand-white;
+		width: $swatch-size;
+		height: $swatch-size;
+		position: relative;
+
+		&[aria-checked=true] {
+			border-color: black;
+		}
+
+		.icon {
+			font-size: 8px;
+			color: $brand-white;
+			mix-blend-mode: difference;
+		}
+	}
+
+	@media (max-width: $screen-sm-max) {
+		&-swatch {
+			width: $swatch-size * 2;
+			height: $swatch-size * 2;
+		}
+	}
+}

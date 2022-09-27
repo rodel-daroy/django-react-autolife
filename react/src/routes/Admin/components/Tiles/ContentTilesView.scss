@@ -1,0 +1,15 @@
+.content-tiles-view {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	> .content-container {
+		flex-grow: 1;
+	}
+	
+	&-filter {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

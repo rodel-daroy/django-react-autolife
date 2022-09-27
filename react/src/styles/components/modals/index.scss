@@ -1,0 +1,9 @@
+.info-modal {
+	max-width: 480px !important;
+
+	h1 {
+		@include title-1;
+
+		margin-top: 0;
+	}
+}

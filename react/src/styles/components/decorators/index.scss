@@ -1,0 +1,15 @@
+.phone-link-modal {
+	h2 {
+		display: flex;
+
+		.icon {
+			margin-right: 4px;
+		}
+	}
+
+	.phone-link-subscript {
+		font-size: .8em;
+		font-weight: $font-weight-light;
+		margin-top: 4px;
+	}
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="34px" viewBox="0 0 36 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Home</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SiriusXM" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(-574.000000, -1225.000000)" id="Welcome" stroke="#8393FF" stroke-width="1.5">
+            <g transform="translate(0.000000, 767.000000)">
+                <g id="Icons/Home" transform="translate(572.000000, 455.000000)">
+                    <path d="M28.75,4.375 C29.785,4.375 30.625,5.215 30.625,6.25 L30.625,26.875 L9.375,26.875 L9.375,6.25 C9.375,5.215 10.215,4.375 11.25,4.375 L28.75,4.375 L28.75,4.375 Z" id="Path"></path>
+                    <path d="M9.375,21.25 C9.375,20.215 10.215,19.375 11.25,19.375 L28.75,19.375 C29.785,19.375 30.625,20.215 30.625,21.25" id="Path"></path>
+                    <path d="M9.375,15 C9.375,13.965 8.535,13.125 7.5,13.125 L5,13.125 C3.965,13.125 3.125,13.965 3.125,15 L3.125,28.75 C3.125,29.785 3.965,30.625 5,30.625 L35,30.625 C36.035,30.625 36.875,29.785 36.875,28.75 L36.875,15 C36.875,13.965 36.035,13.125 35,13.125 L32.5,13.125 C31.465,13.125 30.625,13.965 30.625,15" id="Path"></path>
+                    <polygon id="Path" points="5.625 30.625 5.625 35.625 8.125 35.625 10.625 30.625"></polygon>
+                    <polygon id="Path" points="34.375 30.625 34.375 35.625 31.875 35.625 29.375 30.625"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,344 @@
+@import "../../_variables";
+
+.tile {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s, box-shadow 0.2s, background-size 0.2s;
+  overflow: hidden;
+  position: absolute;
+
+  .tile-outer {
+    width: 100%;
+    height: 100%;
+    padding: 15px 20px 40px 50px;
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      left: -1px;
+      bottom: -1px;
+      background: linear-gradient(
+        180deg,
+        rgba(25, 26, 36, 0) 0%,
+        rgba(25, 26, 36, 0.85) 100%
+      );
+      transform-origin: center bottom;
+      transform: scaleY(0.65);
+
+      transition: transform 0.2s, background 0.2s;
+    }
+  }
+
+  .tile-color-background,
+  .tile-mask-background {
+    background-color: rgba(51, 59, 72, 1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+  }
+
+  .tile-mask-background {
+    bottom: auto;
+    top: 0;
+    z-index: 2;
+    height: 100%;
+  }
+
+  .tile-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 110%;
+    transform: translate(-50%, -50%);
+
+    transition: width 0.75s, height 0.75s;
+
+    .tile-background-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &.active:hover {
+    z-index: 5;
+
+    .tile-outer {
+      &:after {
+        background: linear-gradient(
+          180deg,
+          rgba(25, 26, 36, 0) 0%,
+          rgba(25, 26, 36, 1) 100%
+        );
+        transform: scaleY(1);
+      }
+    }
+
+    .tile-background {
+      width: 115%;
+      height: 115%;
+
+      filter: blur(1.5px);
+    }
+
+    .tile-body {
+      overflow-y: visible;
+    }
+  }
+
+  a.tile-link {
+    font-weight: normal;
+    font-size: 16px;
+    color: #7c828a;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    color: #d80000;
+    border-bottom: 1px solid #d80000;
+    padding-bottom: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    text-transform: uppercase;
+    display: inline-block;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
+  .tile-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .tile-outer {
+      padding-left: 30px;
+      padding-right: 20px;
+
+      &:after {
+        background: linear-gradient(
+          180deg,
+          rgba(25, 26, 36, 0) 0%,
+          rgba(25, 26, 36, 1) 100%
+        );
+        transform: scaleY(1);
+      }
+    }
+
+    .tile-mask-background {
+      display: none;
+    }
+
+    &.active:hover {
+      .tile-background {
+        width: 110%;
+        height: 110%;
+
+        filter: none;
+      }
+    }
+  }
+}
+
+.tile-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  color: $brand-white;
+
+  .tile-body {
+    overflow-y: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    transform: scale(1);
+    font-weight: $font-weight-light;
+  }
+
+  .tile-logo {
+    margin-bottom: 10px;
+    display: block;
+    max-width: 50%;
+    height: auto;
+  }
+
+  &.kind-1 {
+    .tile-body {
+      flex-direction: column;
+
+      .primary-button {
+        margin-left: 0;
+        margin-top: 24px;
+      }
+    }
+  }
+
+  h2 {
+    @include tile-title;
+
+    margin: 30px 0 5px;
+    padding: 0;
+    color: $brand-white;
+  }
+
+  .tile-header-button {
+    white-space: nowrap;
+
+    transition: opacity 0.25s;
+    opacity: 1;
+
+    .radial-button {
+      color: white;
+      border-color: white;
+      margin-left: 12px;
+      margin-top: 3px;
+    }
+  }
+
+  &.hover {
+    .tile-header-button {
+      opacity: 0;
+    }
+  }
+
+  p {
+    padding: 0;
+
+    @include tile-body;
+    color: $brand-lightgrey;
+  }
+
+  &.kind-2 {
+    .tile-header,
+    .tile-body-text {
+      max-width: calc(50% - 15px);
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .tile-body {
+      &.no-text {
+        justify-content: flex-end;
+      }
+    }
+
+    &.kind-1 {
+      .tile-body {
+        flex-direction: row;
+      }
+    }
+
+    &.kind-2 {
+      .tile-header,
+      .tile-body-text {
+        max-width: none;
+      }
+    }
+
+    .tile-header-button {
+      display: none;
+    }
+  }
+}
+
+.tile-slot {
+  position: relative;
+  height: $tile-height;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  &.size-1 {
+		flex-basis: 25%;
+	}
+
+	&.size-2 {
+		flex-basis: 50%;
+	}
+
+	&.size-3 {
+		flex-basis: 75%;
+	}
+
+	&.size-4 {
+		flex-basis: 100%;
+	}
+
+	&.grow {
+		flex-grow: 1;
+	}
+  
+	&.md {
+		&.size-1 {
+			flex-basis: 50%;
+		}
+
+		&.size-2 {
+			flex-basis: 100%;
+		}
+	}
+  
+	&.sm {
+		&.size-1 {
+			flex-basis: 100%;
+		}
+
+		&.size-2 {
+			flex-basis: 100%;
+		}
+	}
+}
+
+.tile-view {
+  position: relative;
+  z-index: 0;
+  background-color: $brand-black;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.tile-action {
+  @include focus-outline(
+    $offset: -10px,
+    $selectorSuffix: ".tile-action-outline"
+  );
+
+  .tile-action-outline {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.btn.tile-action {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  white-space: normal;
+  text-align: left;
+}

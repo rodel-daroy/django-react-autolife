@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Sports</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SiriusXM" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(-944.000000, -1225.000000)" id="Welcome" stroke="#F1C028">
+            <g transform="translate(0.000000, 767.000000)">
+                <g id="Icons/Sports" transform="translate(942.000000, 454.000000)">
+                    <g id="trophy_star">
+                        <path d="M12.21875,19.40625 L12.21875,5.03125 L32.34375,5.03125 L32.34375,19.40625 C32.34375,24.963625 27.838625,29.46875 22.28125,29.46875 C16.723875,29.46875 12.21875,24.963625 12.21875,19.40625 L12.21875,19.40625 Z" id="Path" stroke-width="1.5"></path>
+                        <path d="M16.53125,42.40625 L28.03125,42.40625 L16.53125,42.40625 Z" id="Path" stroke-width="1.5"></path>
+                        <path d="M22.28125,29.46875 L22.28125,42.40625 L22.28125,29.46875 Z" id="Path" stroke-width="1.5"></path>
+                        <path d="M12.21875,7.90625 L3.59375,7.90625 C3.59375,7.90625 3.59375,19.40625 12.21875,19.40625 L12.21875,7.90625 Z" id="Path" stroke-width="1.5"></path>
+                        <path d="M32.34375,7.90625 L40.96875,7.90625 C40.96875,7.90625 40.96875,19.40625 32.34375,19.40625 L32.34375,7.90625 Z" id="Path" stroke-width="1.5"></path>
+                        <polygon id="Path" stroke-width="1.5" points="22.28125 9.34375 20.125 13.65625 15.8125 13.65625 19.40625 16.53125 17.96875 21.5625 22.28125 18.6875 26.59375 21.5625 25.15625 16.53125 28.75 13.65625 24.4375 13.65625"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

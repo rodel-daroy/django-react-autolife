@@ -1,0 +1,7 @@
+@import 'styles/_variables';
+
+.boxout {
+    background-color: scale-color($color: $brand-darkblue, $lightness: 97%);
+    border-radius: 13px;
+    padding: 40px;
+}

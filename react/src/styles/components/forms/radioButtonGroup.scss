@@ -1,0 +1,72 @@
+.autolife-radio-group {
+  position: relative;
+  z-index: 0;
+  
+  .btn-group {
+    display: block;
+    > .btn {
+      padding: 0;
+      margin: 0px 0px 0px 0px;
+
+      &:hover, &:focus {
+        z-index: auto;
+      }
+    }
+  }
+  .btn-group:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 100%;
+  }
+  .btn-radio {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    font-weight: $font-weight-normal;
+    font-size: 16px;
+    color: #232C3A;
+    text-align: center;
+    padding-top: 4px;
+    line-height: 26px;
+    border-radius: 5px;
+
+    > div {
+      padding: 3px 30px;
+    }
+
+    > input {
+      @include focus-outline($offset: 2px, $selectorSuffix: ' + div');
+    }
+
+    &:not(:first-child) {
+      margin-left: -1px !important;
+    }
+
+    &.active {
+      z-index: 1 !important;
+    }
+  }
+  .btn-radio:hover {
+    //z-index: 200;
+  }
+  .btn-radio.active {
+    border-color: #ed222c;
+    color: #ed222c;
+  }
+
+  label {
+    font-size: 21px;
+    font-weight: $font-weight-light;
+    margin-bottom: 26px;
+  }
+
+  &.small {
+    .btn-radio {
+      > div {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
+}
